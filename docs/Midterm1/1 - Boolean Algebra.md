@@ -10,7 +10,7 @@ nav_order: 1
 - have different symbols and their behavior is normally described using a truth table
 
 <div style="text-align: center;">
-  <img src="{{ '/images/Screen Shot 2024-01-22 at 11.29.04 AM.png' | absolute_url }}" alt="Screenshot" width="450">
+  <img src="{{ '/images/Screen Shot 2024-01-22 at 11.29.04 AM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
 
 <div style="text-align: center;">

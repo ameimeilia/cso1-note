@@ -4,4 +4,6 @@ theme: just-the-docs
 
 url: https://ameimeilia.github.io
 
+baseurl: "/cso1-note"
+
 nav_enabled: true
