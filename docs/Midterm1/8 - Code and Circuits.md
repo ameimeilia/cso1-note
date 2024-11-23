@@ -4,39 +4,56 @@ title: Code and Circuits
 parent: Midterm 1
 nav_order: 8
 ---
-##### Demux
+# Code and Circuits
+## Demux
 - connects one input to one of the N outputs
-![[Screenshot 2024-09-12 at 9.58.33 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screenshot 2024-09-12 at 9.58.33 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
-![[Screenshot 2024-09-12 at 9.59.29 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screenshot 2024-09-12 at 9.59.29 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
-##### Register File
+## Register File
 **32-Bit Register File**
 - temporary storage location
 - stores immediately needed variables
 - allows you to simultaneously read from two registers and write into one register
-![[Screenshot 2024-09-12 at 10.00.04 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screenshot 2024-09-12 at 10.00.04 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 **Read From a Register File**
 - use muxes to read from a register file
-![[Screen Shot 2024-02-07 at 5.10.23 PM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-07 at 5.10.23 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **Write to a Register File**
 - use demuxes to write to a register file
 - additional inputs: write enable (WE), write data (WD), address of register to be written to (A3)
-![[Screen Shot 2024-02-07 at 5.17.42 PM.png | center | 450]]
-##### Additional Memory Components
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-07 at 5.17.42 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
+## Additional Memory Components
 **Program Counter**
 - to track where we are in a program
-![[Screen Shot 2024-02-05 at 2.31.19 PM.png | 200]] ![[Screen Shot 2024-02-05 at 2.31.57 PM.png | 250]]
+<div style="text-align: 200]] ![[Screen Shot 2024-02-05 at 2.31.57 PM.png;">
+  <img src="{{ '/images/Screen Shot 2024-02-05 at 2.31.19 PM.png' | relative_url }}" alt="Screenshot" width="250">
+</div>
 
 **Instruction Memory**
 - stores the program
 - read data (RD) for a given address (A)
-![[Screen Shot 2024-02-07 at 6.17.22 PM.png | center | 150]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-07 at 6.17.22 PM.png' | relative_url }}" alt="Screenshot" width="150">
+</div>
 
 **Data Memory**
 - contains data needed by the program
 - read data (RD) for a given address (A)
 - write data (WD) for a given address (A)
-![[Screen Shot 2024-02-07 at 6.24.47 PM.png | center | 150]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-07 at 6.24.47 PM.png' | relative_url }}" alt="Screenshot" width="150">
+</div>

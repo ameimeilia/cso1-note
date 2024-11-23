@@ -3,7 +3,8 @@ title: Buffer Overflow
 parent: Midterm 3
 nav_order: 10
 ---
-##### Bytes and Padding
+# Buffer Overflow
+## Bytes and Padding
 ```C
 #include <stdio.h>
 #include <stdint.h>
@@ -40,7 +41,7 @@ int main() {
 	return 0;
 }
 ```
-##### Data as Code
+## Data as Code
 ```C
 #include <stdio.h>
 #include <stdint.h>
@@ -65,12 +66,16 @@ int main() {
 }
 ```
 
-![[Screen Shot 2024-04-30 at 4.41.09 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-30 at 4.41.09 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Dangers**
 - ASCII characters encoded to hex can represent instructions
-![[Screen Shot 2024-04-30 at 4.46.18 PM.png]]
-##### gets Function
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-30 at 4.46.18 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+## gets Function
 ```C
 #include <stdio.h>
 
@@ -92,8 +97,10 @@ int main() {
 
 - if more than 7 chars are entered, it bleeds into the return address
 - limitations: buffer needs to be long enough, stack has to be executable, address space randomization turned off
-![[Screen Shot 2024-04-30 at 4.54.35 PM.png | center | 300]]
-##### Socket and Buffer Overflows
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-30 at 4.54.35 PM.png' | relative_url }}" alt="Screenshot" width="300">
+</div>
+## Socket and Buffer Overflows
 - to fix the vulnerabilities with the `gets()` function, read from a socket
 ```C
 #include <stdio.h>
@@ -109,7 +116,9 @@ int main() {
 }
 ```
 
-![[Screen Shot 2024-04-30 at 4.59.36 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-30 at 4.59.36 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Error Practice**
 ```C

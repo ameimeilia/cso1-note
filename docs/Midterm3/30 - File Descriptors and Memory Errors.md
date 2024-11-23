@@ -3,7 +3,8 @@ title: File Descriptors and Memory Errors
 parent: Midterm 3
 nav_order: 3
 ---
-##### File Descriptors
+# File Descriptors and Memory Errors
+## File Descriptors
 - non-negative integer that uniquely identifies an open file or I/O stream within a process
 - OS maintains a file descriptor table for each process to keep track of open files
 
@@ -82,20 +83,26 @@ int main() {
 	return 0;
 }
 ```
-##### perror
+## perror
 - library function in C that prints a descriptive error message to `stderr`
 - message based on the global variable `errno` which gets set by system calls/library functions in the event of an error
-![[Screen Shot 2024-05-04 at 2.44.28 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 2.44.28 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **perror Success Case**
-![[Screen Shot 2024-05-04 at 2.45.14 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 2.45.14 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
-##### va_list
+## va_list
 - variable length parameter list
 - ex. `int snprintf(char *s, size_t n, const char *format, ...)`
-![[Screen Shot 2024-05-04 at 2.56.24 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 2.56.24 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
-##### Linux Permissions
+## Linux Permissions
 **Types of permissions:**
 1. read (r) - 4
 2. write (w) - 2
@@ -107,4 +114,6 @@ int main() {
 3. other
 
 - only the owner of the file can change permissions
-![[Screen Shot 2024-05-04 at 2.54.56 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 2.54.56 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>

@@ -4,14 +4,15 @@ title: Bitwise 2
 parent: Midterm 1
 nav_order: 4
 ---
-##### Bitwise Operators
+# Bitwise 2
+## Bitwise Operators
 - compare each bit of the first operand to the corresponding bit of the second operand
 
 |                               &                                |                               \|                                |                                ^                                 |                               ~                                |
 | :------------------------------------------------------------: | :-------------------------------------------------------------: | :--------------------------------------------------------------: | :------------------------------------------------------------: |
 | ![[Screen Shot 2024-01-29 at 2.07.37 PM.png \| center \| 150]] | ![[Screen Shot 2024-01-29 at 2.09.20 PM.png  \| center \| 150]] | ![[Screen Shot 2024-01-29 at 2.07.37 PM 1.png \| center \| 150]] | ![[Screen Shot 2024-01-29 at 2.22.39 PM.png \| center \| 150]] |
 | ![[Screen Shot 2024-02-01 at 1.55.28 PM.png \| center \| 150]] | ![[Screen Shot 2024-02-01 at 1.55.59 PM.png \| center \| 150]]  |  ![[Screen Shot 2024-02-01 at 1.56.20 PM.png \| center \| 150]]  | ![[Screen Shot 2024-02-01 at 1.56.40 PM.png \| center \| 150]] |
-##### Bitwise Shifts
+## Bitwise Shifts
 - move the bit values of a binary object left (<<) / right (>>) x amount
 - left shift = multiplying by 2
 - right shift = dividing by 2
@@ -24,17 +25,17 @@ nav_order: 4
 | ![[Screen Shot 2024-02-01 at 1.41.47 PM.png \| center \| 150]] |                    ![[Screen Shot 2024-02-01 at 1.40.25 PM.png \| center \| 150]]                     |
 
 ![[Screen Shot 2024-02-23 at 12.56.02 PM.png | center | 500]]
-##### Setting and Flipping
+## Setting and Flipping
 Setting to 1 using the | operator:
 ![[Screen Shot 2024-02-01 at 2.00.20 PM.png]]
 
 Flipping using the ^ operator:
 ![[Screen Shot 2024-02-01 at 2.00.49 PM.png]]
-##### Masking and Combining
+## Masking and Combining
 Masking/extracting using the & operator:
 ![[Screen Shot 2024-02-01 at 2.01.07 PM.png]]
 
 Combining using the | operator:
 ![[Screen Shot 2024-02-01 at 2.01.21 PM.png]]
-##### Parity
+## Parity
 - either 1 (total amount of “1” bits is odd)or 0 (total amount of “1” bits is even)

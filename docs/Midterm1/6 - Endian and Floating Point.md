@@ -4,11 +4,15 @@ title: Endian and Floating Point
 parent: Midterm 1
 nav_order: 6
 ---
-##### Endianness
+# Endian and Floating Point
+## Endianness
 - **Little endian**: least significant byte at lowest address
 - **Bit endian**: most significant byte at lowest address
-![[Screen Shot 2024-01-29 at 2.38.16 PM.png | center]]
-##### Floating Point
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-01-29 at 2.38.16 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+
+## Floating Point
 - scientific notation in base 2
 
 **Floats** have 3 parts:
@@ -19,7 +23,11 @@ nav_order: 6
 	- If the exponent suggested this was not the normal-case number, may have special meaning
 
 **4 Cases of Floats:**
-![[Screen Shot 2024-01-29 at 2.47.08 PM.png | center | 600]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-01-29 at 2.47.08 PM.png' | relative_url }}" alt="Screenshot" width="600">
+</div>
 
-##### Exam Questions
-![[Screenshot 2024-09-12 at 9.53.11 PM.png | center]]
+## Exam Questions
+<div style="text-align: center;">
+  <img src="{{ '/images/Screenshot 2024-09-12 at 9.53.11 PM.png' | relative_url }}" alt="Screenshot">
+</div>

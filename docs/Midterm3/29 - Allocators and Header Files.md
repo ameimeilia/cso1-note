@@ -3,8 +3,12 @@ title: Allocators and Header Files
 parent: Midterm 3
 nav_order: 2
 ---
-![[Screen Shot 2024-04-03 at 2.22.57 PM.png]]
-##### scanf
+# Allocators and Header Files
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-03 at 2.22.57 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+
+## scanf
 ```C
 int scanf(const char *format, ...)
 // ... indiciates that the function accepts variable length arguments
@@ -19,7 +23,7 @@ int b;
 printf("Enter two number: ");
 scanf("%d %d", &a, &b);
 ```
-##### Malloc Examples
+## Malloc Examples
 ```C
 // use dynamically allocated memory on the stack to read in a file
 // vs. declaring variables on the stack: might exceed/take up unnecessary space
@@ -33,8 +37,10 @@ int main(){
 }
 ```
 
-![[Screen Shot 2024-04-09 at 10.08.14 AM.png | center | 450]]
-##### Allocators Implementing Malloc
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-09 at 10.08.14 AM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
+## Allocators Implementing Malloc
 Allocators:
 1. can’t control the number or size of allocated blocks
 2. must allocate blocks from free memory
@@ -45,17 +51,21 @@ Allocators:
 - instead of memory addresses, use word addresses (int-sized)
 
 **Knowing How Much Memory to Free**
-![[Screen Shot 2024-04-09 at 10.13.33 AM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-09 at 10.13.33 AM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **Keeping Track of Free Blocks**
-![[Screen Shot 2024-04-09 at 10.13.55 AM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-09 at 10.13.55 AM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **Picking a Block for Allocation**
 - fragmentation: losing space after freeing a pointer
 - methods (still have fragmentation):
 	1. best fit
 	2. next fit
-##### Header Files
+## Header Files
 - API that provides the method definition so we can use a library
 ```C
 #include <filename.h>    // for files in system/default directory
@@ -75,7 +85,7 @@ Allocators:
 
 #endif
 ```
-##### FILE IO
+## FILE IO
 ```C
 FILE *fopen(const char *filename, const chat *mode);
 ```

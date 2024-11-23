@@ -3,13 +3,16 @@ title: Mini Compiler 2
 parent: Midterm 3
 nav_order: 6
 ---
-##### Bottom-up Parsing
+# Mini Compiler 2
+## Bottom-up Parsing
 **Bottom-up Parsing**
 ![[Screen Shot 2024-04-17 at 2.05.20 PM.png]]
 
 **AST**
-![[Screen Shot 2024-04-17 at 2.07.08 PM.png]]![[Screen Shot 2024-04-17 at 2.07.17 PM.png | center | 250]]
-##### Code Generation
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.07.08 PM.png]]![[Screen Shot 2024-04-17 at 2.07.17 PM.png' | relative_url }}" alt="Screenshot" width="250">
+</div>
+## Code Generation
 **Output Assembly**
 ![[Screen Shot 2024-04-17 at 2.10.25 PM.png]]
 
@@ -28,5 +31,5 @@ nav_order: 6
 
 **Another Example**
 ![[Screen Shot 2024-04-17 at 2.30.39 PM.png]]
-##### Conditionals and If Statements
+## Conditionals and If Statements
 ![[Screen Shot 2024-04-17 at 2.32.11 PM.png]]![[Screen Shot 2024-04-17 at 2.32.26 PM.png]]![[Screen Shot 2024-04-17 at 2.32.47 PM.png]]![[Screen Shot 2024-04-17 at 2.33.01 PM.png]]![[Screen Shot 2024-04-17 at 2.36.39 PM.png]]![[Screen Shot 2024-04-17 at 2.37.28 PM.png]]

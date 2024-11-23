@@ -3,7 +3,8 @@ title: Generic Swpa and Memcpy
 parent: Midterm 3
 nav_order: 4
 ---
-##### System Call Calling Convention
+# Generic Swpa and Memcpy
+## System Call Calling Convention
 **1. Register Usage for Arguments**
 1. `%rax`: system call number to tell the kernel
 2. `%rdi, %rsi, %rdx, %r10, %r8, %r9`: used for passing up to 6 arguments
@@ -11,7 +12,9 @@ nav_order: 4
 
 **2. Making the System Call**
 1. `syscall` instruction switches into kernel mode and invokes the system call based on the value in `%rax`
-![[Screen Shot 2024-05-04 at 3.25.25 PM.png | center | 300]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 3.25.25 PM.png' | relative_url }}" alt="Screenshot" width="300">
+</div>
 
  **3. Return Value**
  1. the return value is placed in `%rax`, indicates success or error code
@@ -33,8 +36,10 @@ message: ;                     // Label for the message
 	.ascii "Computer Systems 1" ;
 ```
 
-![[Screen Shot 2024-05-04 at 3.32.11 PM 1.png]]
-##### memcpy and memmove
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 3.32.11 PM 1.png' | relative_url }}" alt="Screenshot">
+</div>
+## memcpy and memmove
 **memcpy**
 -  function in the C standard library, defined in <string.h>
 - used to copy a specified number of bytes from one memory location to another
@@ -82,7 +87,7 @@ int main() {
 	return 0;
 }
 ```
-##### Generic Swap
+## Generic Swap
 ```C
 void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 	// store a copy o fdata1 in temp storage
@@ -98,14 +103,16 @@ void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 	free(temp);
 }
 ```
-##### strsep
+## strsep
 ```C
 // stringp is a pointer to the string that we want to parse
 // delim is a string that contains multiple delimiters
 char *strsep(char **stringp, const char *delim);
 ```
 
-![[Screen Shot 2024-05-04 at 4.25.15 PM 1.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 4.25.15 PM 1.png' | relative_url }}" alt="Screenshot">
+</div>
 
 ```C
 #include <stdio.h>

@@ -3,7 +3,7 @@ title: Undefined Behavior
 parent: Midterm 3
 nav_order: 1
 ---
-##### Undefined Behavior
+# Undefined Behavior
 - behavior for which the International Standard imposes no requirements
 
 **Examples**
@@ -88,7 +88,7 @@ void my_func(unsigned short a, unsigned short b){
 }
 my_func(656635, 65535);    // prints 4294836255 < 2147483648
 ```
-##### Padding in Structs
+## Padding in Structs
 ```C
 struct name_tag{
 	int y;
@@ -97,4 +97,6 @@ struct name_tag{
 }
 ```
 
-![[Screen Shot 2024-04-11 at 12.16.56 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-11 at 12.16.56 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>

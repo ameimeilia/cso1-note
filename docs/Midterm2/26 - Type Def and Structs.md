@@ -4,12 +4,20 @@ title: Type Def and Structs
 parent: Midterm 2
 nav_order: 11
 ---
-##### Array of Strings
-![[Screen Shot 2024-04-02 at 12.33.00 PM.png | center | 400]]
+# Type Def and Structs
+## Array of Strings
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.33.00 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
-![[Screen Shot 2024-04-02 at 12.34.20 PM.png]]
-![[Screen Shot 2024-04-02 at 12.34.58 PM.png | center | 400]]
-##### Array Access
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.34.20 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.34.58 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+
+## Array Access
 ```C
 strings[1][2] <-> (*(strings + 1))[2] <-> *((*(strings + 1)) + 2)
 
@@ -19,11 +27,15 @@ char **x = strings;
 x[1][2] <-> (*(x + 1))[2] <-> *((*(x + 1)) + 2)
 ```
 - accesses the letter at index 2 of the word at index 1
-##### Two-Dimensional Arrays
+
+## Two-Dimensional Arrays
 - arrays must be stored in 1-dimension
 - **row-major ordering**: rows are stored stacked one after the next
-![[Screen Shot 2024-04-02 at 12.45.45 PM.png | center | 400]]
-##### Type Def
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.45.45 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+
+## Type Def
 - allows you to provide an alias for a type
 - `typedef [type_info] [new_name];`
 
@@ -46,7 +58,7 @@ string AI = "maybe";
 
 printf("%s\n, name")
 ```
-##### Structs
+## Structs
 - composite data type that allows you to group variables of different data types under a single name
 
 **Format**
@@ -107,4 +119,6 @@ printf("grade %0.2f", grade);
 - structs are represented as a block of memory big enough to hold all fields
 - fields are ordered according to the order they appear in code
 - type information is lost
-![[Screen Shot 2024-04-02 at 1.12.18 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 1.12.18 PM.png' | relative_url }}" alt="Screenshot">
+</div>

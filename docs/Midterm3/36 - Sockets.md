@@ -3,8 +3,11 @@ title: Sockets
 parent: Midterm 3
 nav_order: 9
 ---
-##### Client-Server Model
-![[Screen Shot 2024-04-25 at 5.27.56 PM.png | center | 450]]
+# Sockets
+## Client-Server Model
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-25 at 5.27.56 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **Client Code (Python)**
 ```Python
@@ -66,17 +69,21 @@ server_socket.close()
 if __name__ == '__main__':
 	start_server()
 ```
-##### Network Communications
+## Network Communications
 - socket interface behaves like files → read and write to sockets
 - ports: a unique number between 1-65,535 (16 bits wide) assigned to a socket
 		- dynamically allocated sockets pick port numbers between 49,152-65,535
 - the OS maintains the mapping between sockets and processes
 - each socket on the network is uniquely identified by IP and port number
-![[Screen Shot 2024-04-25 at 6.12.56 PM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-25 at 6.12.56 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **The Process**
-![[Screen Shot 2024-04-25 at 6.09.17 PM.png | center | 500]]
-##### C Code
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-25 at 6.09.17 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
+## C Code
 **Imports**
 ```C
 #include <stdio.h>
@@ -145,7 +152,7 @@ while (1) {
 }
 close(server_fd);
 ```
-##### HTTP Basics
+## HTTP Basics
 **Request**
 ```
 GET /index HTTP/1.1\r\n
@@ -158,5 +165,7 @@ HTTP/1.1 200 OK
 --- Headers ---
 --- Content ----
 ```
-##### Overview
-![[Screen Shot 2024-04-25 at 6.47.06 PM.png | center | 500]]
+## Overview
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-25 at 6.47.06 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>

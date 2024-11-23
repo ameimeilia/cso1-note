@@ -4,16 +4,19 @@ title: Misterm 2 Study Guide
 parent: Midterm 2
 nav_order: 13
 ---
+
 #### Toy ISA
-##### ISA extended R=1
-![[Screen Shot 2024-02-25 at 10.36.11 PM.png | center | 500]]
+## ISA extended R=1
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-25 at 10.36.11 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 1. R2 = first parameter
 2. R3 = second parameter
 3. R0 = return value of the function
 4. save registers before modifying and restore them before returning
 5. use 0xFF for halt instead of 0x80
-##### Functions
+## Functions
 - save registers before modifying and restore them before returning
 - use 0xFF for halt instead of 0x80
 
@@ -22,15 +25,21 @@ nav_order: 13
 3. R0 = return value of the function
 
 **Recursive Sum Function Example**
-![[Screen Shot 2024-02-25 at 11.52.11 PM.png | center | 200]]
-![[Screen Shot 2024-02-25 at 11.51.26 PM.png]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-25 at 11.52.11 PM.png' | relative_url }}" alt="Screenshot" width="200">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-02-25 at 11.51.26 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 #### Assembly
-##### Assembly Syntax
+## Assembly Syntax
 **Register Aliasing**
 - RAX: 64 bits
 - EAX: lower 32 bits
 - AX: lower 16 bits, split into AH (higher 8) and AL (lower 8)
-![[Screen Shot 2024-02-26 at 2.32.07 PM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-26 at 2.32.07 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **AT&T Syntax**
 - $: value of constant 
@@ -47,8 +56,10 @@ movl 0x1234, %eax // Move the value stored at memory address 0x1234 into EAX
 addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of EDX
 ```
 
-![[Screen Shot 2024-02-28 at 2.07.48 PM.png | center | 250]]
-##### Computed Addresses
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-28 at 2.07.48 PM.png' | relative_url }}" alt="Screenshot" width="250">
+</div>
+## Computed Addresses
 - **displacement(base, index, scale) = base + (index * scale) + displacement**
 - base = starting point in memory
 - scale = size of value (limited to 1, 2, 4, 8)
@@ -57,13 +68,17 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
 
 **Computed Address Example**
 ![[ComputedAddressExample | 600]]
-##### Calling Convention
+## Calling Convention
 **Caller**
-![[Screen Shot 2024-03-14 at 1.38.45 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 1.38.45 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
 **Callee**
-![[Screen Shot 2024-03-14 at 4.18.14 PM.png | center | 400]]
-##### Stack Frames
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 4.18.14 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+## Stack Frames
 **Contains:**
 1. local storage of variables (optional)
 2. temporary scape (optional)
@@ -71,10 +86,14 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
 
 - stack pointer %rsp points to the top of the stack
 - frame pointer %rbp points to the base of the frame (optional)
-![[Screen Shot 2024-03-14 at 4.24.04 PM.png | center | 300]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 4.24.04 PM.png' | relative_url }}" alt="Screenshot" width="300">
+</div>
 
-![[Screen Shot 2024-03-14 at 4.29.16 PM.png | center | 300]]
-##### cmp, test, and jmp
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 4.29.16 PM.png' | relative_url }}" alt="Screenshot" width="300">
+</div>
+## cmp, test, and jmp
 **Compare (CMP) Instruction**
 - subtracts but doesn’t store result
 - `cmp %rax, %rdi -> rdi-rax`
@@ -90,11 +109,16 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
 	3. ZF: zero flag
 	4. OF: overflow flag (for signed overflow)
 
-![[Screen Shot 2024-03-14 at 5.27.33 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 5.27.33 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
 **Computed Jumps**
-![[Screen Shot 2024-03-14 at 5.48.01 PM.png | center | 400]]
-##### Overlapping Registers
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 5.48.01 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+
+## Overlapping Registers
 - setting 32-bit registers clears the corresponding 64-bit register
 ```
 movq $0xFFFFFFFFFFFFFFFF, %rax
@@ -110,17 +134,21 @@ movb $0x1, %al
 
 // %rax is $0xFFFFFFFFFFFFFF01
 ```
-##### movq and leaq
+## movq and leaq
 **movq**
 - can be used to perform pushing and popping
 - uses subsections of rsp/rbp rather than multiple registers
 - `-4(%rsp)`: value at the memory of rsp - 4
-![[Screen Shot 2024-03-14 at 11.33.03 AM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 11.33.03 AM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **movq vs leaq**
 - leaq calculates an address and loads it into the destination
 - movq moves content and will access memory if the source operand is a memory location
-![[Screen Shot 2024-03-15 at 2.37.36 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-03-15 at 2.37.36 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **lea Tricks**
 ```
@@ -134,21 +162,30 @@ leaq (%rbx, %rcx), %rdx
 rdx <- rbx + rcx
 rdx <- address-of(memory[rbx + rcx])
 ```
-##### Switch Statement and Jump Tables
+## Switch Statement and Jump Tables
 **General Form**
-![[Screen Shot 2024-03-25 at 8.09.29 PM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-25 at 8.09.29 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **Example**
-![[Screen Shot 2024-03-25 at 8.20.03 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-25 at 8.20.03 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 - for fall through cases, add an extra label for the fall and its instruction
 - when it is case 2, it will not perform w = 1
-![[Screen Shot 2024-03-25 at 8.25.30 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-25 at 8.25.30 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+
 #### C
-##### C Syntax
+## C Syntax
 **Types**
 - each type has a certain size
-![[Screen Shot 2024-03-26 at 10.05.33 AM.png | center | 150]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-26 at 10.05.33 AM.png' | relative_url }}" alt="Screenshot" width="150">
+</div>
 
 ```C
 int x = 3;
@@ -158,18 +195,26 @@ int number_of_bytes = sizeof(x);    // sizeof(x) returns 4
 **Variables**
 `int [variable_name];    // declares an integer variable`
 - 32 bits from a 64 bit address are dedicated to storing the integer value
-![[Screen Shot 2024-03-26 at 2.04.05 PM.png | center | 350]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-26 at 2.04.05 PM.png' | relative_url }}" alt="Screenshot" width="350">
+</div>
 
 - uninitialized variables are free-floating and their value may change
-![[Screen Shot 2024-03-26 at 2.13.49 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-26 at 2.13.49 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 **printf**
 - follows the format `printf([specifier], [argument])`
-![[Screen Shot 2024-03-26 at 10.40.07 AM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-26 at 10.40.07 AM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
 **scanf**
 - performs a formatted read
-![[Screen Shot 2024-03-27 at 12.39.08 AM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-03-27 at 12.39.08 AM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Pointers**
 `int *pointer = &variable;    //& gives the address of the variable`
@@ -179,7 +224,7 @@ int number_of_bytes = sizeof(x);    // sizeof(x) returns 4
 `int variable2 = *pointer` sets variable2 to the value the pointer points to
 
 `*pointer = 4` goes to the memory location and sets the value to 4
-##### Pointers
+## Pointers
 **Pointer Rules**
 1. `[type] *[variable_name]` is a declaration
 2. `*[variable_name] = ` means go to the address stored at the pointer and update it
@@ -187,18 +232,26 @@ int number_of_bytes = sizeof(x);    // sizeof(x) returns 4
 4. ` = &[variable_name]` means get the address of the variable
 
 **Pointers Example**
-![[Screen Shot 2024-03-28 at 11.51.36 AM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-28 at 11.51.36 AM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
 **Pass by Value**
 - can’t pass references, must pass an address that gets stored in a pointer
 
 **Pass by Value Example**
-![[Screen Shot 2024-03-28 at 12.15.18 PM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-28 at 12.15.18 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **Pointer to a Pointer**
-![[Screen Shot 2024-04-02 at 11.39.08 AM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 11.39.08 AM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
-![[Screen Shot 2024-04-02 at 11.43.38 AM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 11.43.38 AM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 **Null Pointer**
 - pointer that does not point to any memory location
@@ -230,7 +283,7 @@ char q = *p;    // NOT ALLOWED
 // derefence to get char
 char q = *((char*)p);
 ```
-##### Arrays
+## Arrays
 **Example Implementation**
 ```C
 // declaration and initialization
@@ -247,9 +300,13 @@ int totalNumberOfBytes = sizeof(x);    // = 16 (4 elements * 4 bytes)
 
 *(x + 2) = 5;    // in Assembly, x + 2 would be represented as 0xDD + 8
 ```
- ![[Screen Shot 2024-04-03 at 6.31.57 PM.png | center | 500]]
+ <div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-03 at 6.31.57 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 **Array Accesses Examples**
-![[Screen Shot 2024-03-28 at 2.10.34 PM.png | center | 450]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-28 at 2.10.34 PM.png' | relative_url }}" alt="Screenshot" width="450">
+</div>
 
 **Array Nuances**
 - arrays are not simply pointers, they are of type `int[n]`, meaning they cannot be assigned
@@ -265,15 +322,21 @@ x = p;    // not allowed, array is not assignable
 ```
 
 **Examples**
-![[Screen Shot 2024-03-28 at 3.50.36 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-28 at 3.50.36 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
-![[Screen Shot 2024-03-28 at 3.52.58 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-28 at 3.52.58 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 **Two-Dimensional Arrays**
 - arrays must be stored in 1-dimension
 - row-major ordering: rows are stored stacked one after the next
-![[Screen Shot 2024-04-02 at 12.45.45 PM.png | center | 400]]
-##### Strings
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.45.45 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+## Strings
 **Char Array**
 ```C
 // the string is stored in the code section, so it is not writable
@@ -295,9 +358,15 @@ size_t strlen(const char *str)
 ```
 
 **Array of Strings**
-![[Screen Shot 2024-04-02 at 12.33.00 PM.png | center | 400]]
-![[Screen Shot 2024-04-02 at 12.34.20 PM.png]]
-![[Screen Shot 2024-04-02 at 12.34.58 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.33.00 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.34.20 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 12.34.58 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
 **String Array Access**
 ```C
@@ -309,7 +378,7 @@ OR
 char **x = strings;
 x[1][2] <-> (*(x + 1))[2] <-> *((*(x + 1)) + 2)
 ```
-##### Command Line Arguments
+## Command Line Arguments
 - the first element in the `argv` array is the name of the program itself
 - when you call `./a.out Hello` it will print `a.out`
 ```C
@@ -328,7 +397,7 @@ int main(int argc, char **argv){
 	}
 }
 ```
-##### typedef, struct, and union
+## typedef, struct, and union
 **typedef**
 - allows you to provide an alias for a type
 - `typedef [type_info] [new_name];`
@@ -396,7 +465,9 @@ printf("grade %0.2f", grade);
 - structs are represented as a block of memory big enough to hold all fields
 - fields are ordered according to the order they appear in code
 - type information is lost
-![[Screen Shot 2024-04-02 at 1.12.18 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 1.12.18 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **union**
 ```C
@@ -413,7 +484,7 @@ int main(){
 	return 0;
 }
 ```
-##### The Heap
+## The Heap
 - the heap is used for dynamic memory allocation
 - it can be explicitly managed using the functions `malloc`, `calloc`, `realloc`, and `free`
 
@@ -427,7 +498,9 @@ void* malloc(size_t size);
 // memory is simply allocated, not set
 int *a = (int *)malloc(sizeof(int) * 8);
 ```
-![[Screen Shot 2024-04-02 at 1.41.50 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 1.41.50 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **calloc** (contiguous allocation)
 ```C
@@ -436,7 +509,9 @@ int *a = (int *)malloc(sizeof(int) * 8);
 // sets memory to 0
 void* calloc(size_t nmemb, size_t size);
 ```
-![[Screen Shot 2024-04-02 at 1.42.06 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 1.42.06 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **realloc** (reallocation)
 ```C
@@ -445,7 +520,9 @@ void* calloc(size_t nmemb, size_t size);
 // memory in newly reserved space is not set
 void* realloc(void *ptr, size_t size);
 ```
-![[Screen Shot 2024-04-02 at 1.42.20 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-02 at 1.42.20 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **free**
 ```C

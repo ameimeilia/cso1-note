@@ -4,13 +4,19 @@ title: X86 Examples
 parent: Midterm 2
 nav_order: 5
 ---
-##### Optimization
+# X86 Examples
+## Optimization
 **No optimization**
-![[Screen Shot 2024-03-14 at 4.57.49 PM.png | center | 300]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 4.57.49 PM.png' | relative_url }}" alt="Screenshot" width="300">
+</div>
 **-03 Optimization**
 - `(%rdi, %rsi)` produces a computed address using the load effective address instruction
-![[Screen Shot 2024-03-14 at 4.58.09 PM.png | center | 300]]
-##### Additional Instructions
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 4.58.09 PM.png' | relative_url }}" alt="Screenshot" width="300">
+</div>
+
+## Additional Instructions
 **Compare (CMP) Instruction**
 - subtracts but doesn’t store result
 - `cmp %rax, %rdi -> rdi-rax`
@@ -18,7 +24,7 @@ nav_order: 5
 **Test Instruction**
 - computes bitwise and
 - `test %rax, %rdi -> rdi & rax`
-##### Condition Codes and Jumps
+## Condition Codes and Jumps
 **Flags**:
 - CF: carry flag(for unsigned)
 - SF: sign flag (for signed negatives)
@@ -31,13 +37,21 @@ nav_order: 5
 **Jumps**
 - `jle, jg, je` read condition codes following a comparison
 - `jg` is simply the NOT of `jle`
-![[Screen Shot 2024-03-14 at 5.27.33 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 5.27.33 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
 **Example**
-![[Screen Shot 2024-03-14 at 5.34.28 PM.png | center | 400]]
-##### Computed Jumps
-![[Screen Shot 2024-03-14 at 5.48.01 PM.png | center | 400]]
-##### Overlapping Registers
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 5.34.28 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+
+## Computed Jumps
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 5.48.01 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
+
+## Overlapping Registers
 - setting 32-bit registers clears the corresponding 64-bit register
 ```
 movq $0xFFFFFFFFFFFFFFFF, %rax
@@ -53,5 +67,8 @@ movb $0x1, %al
 
 // %rax is $0xFFFFFFFFFFFFFF01
 ```
-##### Factorial Example
-![[Screen Shot 2024-03-14 at 6.08.44 PM.png]]
+
+## Factorial Example
+<div>
+  <img src="{{ '/images/Screen Shot 2024-03-14 at 6.08.44 PM.png' | relative_url }}" alt="Screenshot">
+</div>

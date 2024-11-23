@@ -3,7 +3,8 @@ title: Fucntion Pointers 1
 parent: Midterm 3
 nav_order: 7
 ---
-##### Function Pointer
+# Fucntion Pointers 1
+## Function Pointer
 - holds the memory address of the function to be executed
 
 **Declaration and Initialization**
@@ -44,7 +45,7 @@ int main() {
 	return 0;
 }
 ```
-##### Generic Sort
+## Generic Sort
 - `qsort()` function sorts an array with `nmemb` elements of size `size` where `base` points to the start of the array
 ```C
 void qsort(void *base, size_t nmemb, size_t size,
@@ -69,7 +70,7 @@ int main() {
 	return 0;
 }
 ```
-##### The Right-Left Rule
+## The Right-Left Rule
 **Symbols:**
 - * means 'pointer to' (left side)
 - [] means 'array of' (right side)

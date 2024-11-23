@@ -3,6 +3,7 @@ title: Midterm 3 Study Guide
 parent: Midterm 3
 nav_order: 11
 ---
+# Midterm 3 Study Guide
 #### Undefined Behavior
 **Examples of Undefined Behavior**
 ```C
@@ -83,7 +84,9 @@ int main(){
 }
 ```
 #### Allocators and Header Files (unfinished)
-![[Screen Shot 2024-04-03 at 2.22.57 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-03 at 2.22.57 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Allocators**
 
@@ -91,7 +94,9 @@ int main(){
 **Header Files**
 #### Files Descriptors
 **File Descriptors**
-![[Screen Shot 2024-05-04 at 7.30.45 PM.png | center | 200]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 7.30.45 PM.png' | relative_url }}" alt="Screenshot" width="200">
+</div>
 - `<fcntl.h>`: file control header file
 
 ```C
@@ -129,11 +134,15 @@ int main() {
 **perror**
 - prints error message to `stderr` based on `errno` variable
 - if no error, doesn’t terminate and `errno` = Success
-![[Screen Shot 2024-05-04 at 2.44.28 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 2.44.28 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **va_list**
 - variable length parameter list
-![[Screen Shot 2024-05-04 at 2.56.24 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 2.56.24 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 **Linux Permissions**
 user → group → other
@@ -167,7 +176,9 @@ message: ;                     // Label for the message
 	.ascii "Computer Systems 1" ;
 ```
 
-![[Screen Shot 2024-05-04 at 3.32.11 PM 1.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 3.32.11 PM 1.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **memcpy and memmove**
 ```C
@@ -201,7 +212,9 @@ void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 char *strsep(char **stringp, const char *delim);
 ```
 
-![[Screen Shot 2024-05-04 at 4.25.15 PM 1.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 4.25.15 PM 1.png' | relative_url }}" alt="Screenshot">
+</div>
 
 ```C
 #include <stdio.h>
@@ -223,33 +236,51 @@ int main() {
 ![[Screen Shot 2024-05-04 at 4.32.02 PM 1.png| center | 200]]
 #### Mini Compiler
 **Overview**
-![[Screen Shot 2024-05-05 at 2.43.12 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-05 at 2.43.12 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 **Lex**
 - input `.l` file containing regular expressions and corresponding C code actions
-![[Screen Shot 2024-05-05 at 3.03.09 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-05 at 3.03.09 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 - compile with Lex to generate a C source file `lex.yy.c`, then compile the C source file with the main program
 - reads input and divides into tokens
 
 **Yacc**
 - input `.y` file containing formal grammar descriptions in Backus-Naur Form and corresponding C code actions
-![[Screen Shot 2024-04-17 at 1.26.37 PM.png | center | 550]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 1.26.37 PM.png' | relative_url }}" alt="Screenshot" width="550">
+</div>
 - compile with Yacc to generate C source file `y.tab.c` and header file `y.tab.h`, then compile the C source file with the main program
-![[Screen Shot 2024-04-17 at 1.41.04 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 1.41.04 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 - reads tokens and constructs a syntax tree using bottom up parsing
-![[Screen Shot 2024-04-17 at 2.05.20 PM.png]]
-![[Screen Shot 2024-05-05 at 3.46.32 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.05.20 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-05 at 3.46.32 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Code Generation**
-![[Screen Shot 2024-04-17 at 2.10.46 PM.png]]
-![[Screen Shot 2024-05-05 at 4.38.21 PM.png]]
-![[Screen Shot 2024-05-05 at 4.46.04 PM.png | center | ]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.10.46 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-05 at 4.38.21 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-05 at 4.46.04 PM.png' | relative_url }}" alt="Screenshot" width="">
+</div>
 #### Function Pointers, Generic Sort
 **Function Pointers**
 ```C
 #include <stdio.h>
 
-##### GENERAL FORM #####
+## GENERAL FORM ##
 float div (int a, int b){
 	return a/b;
 }
@@ -261,7 +292,7 @@ int main(){
 	printf("%f", result);
 }
 
-##### PASSING A FUNCTION POINTER #####
+## PASSING A FUNCTION POINTER ##
 int add(int a, int b) {
 	return a + b;
 }
@@ -277,7 +308,7 @@ int main() {
 	return 0;
 }
 
-##### RETURNING FUNCTION POINTER #####
+## RETURNING FUNCTION POINTER ##
 float div(int x, int y){
 	return ((float)x)/y;
 }
@@ -286,7 +317,7 @@ float (*return_func())(int, int) {
 	return div;
 }
 
-##### TYPEDEF AND STRUCTS #####
+## TYPEDEF AND STRUCTS ##
 typedef int (*Operation)(int, int); // Define a function pointer type
 
 // Define a struct to hold two integers and a function pointer
@@ -442,20 +473,30 @@ int main(){
 ```
 #### Sockets
 **Client Server Model**
-![[Screen Shot 2024-05-04 at 5.25.00 PM.png | center | 400]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 5.25.00 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 **The Process**
-![[Screen Shot 2024-04-25 at 6.09.17 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-25 at 6.09.17 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
-![[Screen Shot 2024-05-04 at 5.20.46 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 5.20.46 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 #### Buffer Overflow
 **Padding in Structs/Unions**
 - aligns members for optimal memory access
-![[Screen Shot 2024-05-04 at 5.35.42 PM.png | center | 500]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 5.35.42 PM.png' | relative_url }}" alt="Screenshot" width="500">
+</div>
 
 **gets(), Socket and Buffer Overflow**
 - `gets()` doesn’t check the bounds of the buffer → memory leaks
-![[Screen Shot 2024-04-30 at 4.54.35 PM.png | center | 300]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-04-30 at 4.54.35 PM.png' | relative_url }}" alt="Screenshot" width="300">
+</div>
 
 - if we read from the socket then an attacker can execute arbitrary code
 ```C
@@ -465,4 +506,6 @@ void vulnerable_function(int sockfd) {    // dangerous!!
 }
 ```
 
-![[Screen Shot 2024-04-30 at 4.59.36 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-30 at 4.59.36 PM.png' | relative_url }}" alt="Screenshot">
+</div>
