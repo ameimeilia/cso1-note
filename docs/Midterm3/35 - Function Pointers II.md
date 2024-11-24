@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Function Pointers 2
 parent: Midterm 3
 nav_order: 8
@@ -45,6 +46,7 @@ int main(){
 	return 0;
 }
 ```
+
 ## Enums
 - user-defined data type that consists of a set of named integer constants
 - used to define a list of named values that represent a finite set of possible values for a variable
@@ -101,6 +103,7 @@ void move(enum Direction dir) {    // so readable!!!
 	}
 }
 ```
+
 ## Volatile and Extern
 **Volatile**
 ```C 
@@ -135,6 +138,7 @@ int main() {
 	return 0;
 }
 ```
+
 ## Bit Fields
 - used to specify the width ≤ to that of a type
 - limitations: can have pointers due to alignment/padding

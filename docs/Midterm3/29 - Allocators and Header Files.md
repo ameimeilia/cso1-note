@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Allocators and Header Files
 parent: Midterm 3
 nav_order: 2

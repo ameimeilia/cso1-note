@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Sockets
 parent: Midterm 3
 nav_order: 9
@@ -69,6 +70,7 @@ server_socket.close()
 if __name__ == '__main__':
 	start_server()
 ```
+
 ## Network Communications
 - socket interface behaves like files → read and write to sockets
 - ports: a unique number between 1-65,535 (16 bits wide) assigned to a socket
@@ -83,6 +85,7 @@ if __name__ == '__main__':
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-25 at 6.09.17 PM.png' | relative_url }}" alt="Screenshot" width="500">
 </div>
+
 ## C Code
 **Imports**
 ```C
@@ -152,6 +155,7 @@ while (1) {
 }
 close(server_fd);
 ```
+
 ## HTTP Basics
 **Request**
 ```
@@ -165,6 +169,7 @@ HTTP/1.1 200 OK
 --- Headers ---
 --- Content ----
 ```
+
 ## Overview
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-25 at 6.47.06 PM.png' | relative_url }}" alt="Screenshot" width="500">

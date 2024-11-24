@@ -18,6 +18,7 @@ nav_order: 8
 **Debugging**
 - `clang -g puts.c -o puts.out`: the -g flag allows for line level debugging
 - `lldb` allows you to step into a function and see the corresponding assembly
+
 ## C Syntax
 **Types**
 - each type has a certain size

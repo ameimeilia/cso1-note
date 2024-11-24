@@ -18,6 +18,7 @@ nav_order: 3
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-01-28 at 3.58.32 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
+
 ## Ripple Carry Adders
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-01-24 at 2.31.34 PM.png' | relative_url }}" alt="Screenshot" width="500">
@@ -27,7 +28,6 @@ nav_order: 3
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-01-28 at 4.07.18 PM.png' | relative_url }}" alt="Screenshot" width="250">
 </div>
-
 
 ## Exam Questions
 <div style="text-align: center;">

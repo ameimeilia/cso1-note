@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Undefined Behavior
 parent: Midterm 3
 nav_order: 1

@@ -1,10 +1,11 @@
 ---
+layout: default
 title: Midterm 3 Study Guide
 parent: Midterm 3
 nav_order: 11
 ---
 # Midterm 3 Study Guide
-#### Undefined Behavior
+## Undefined Behavior
 **Examples of Undefined Behavior**
 ```C
 int main(){
@@ -83,7 +84,8 @@ int main(){
 	return 0;
 }
 ```
-#### Allocators and Header Files (unfinished)
+
+## Allocators and Header Files (unfinished)
 <div>
   <img src="{{ '/images/Screen Shot 2024-04-03 at 2.22.57 PM.png' | relative_url }}" alt="Screenshot">
 </div>
@@ -92,7 +94,10 @@ int main(){
 
 
 **Header Files**
-#### Files Descriptors
+
+
+
+## Files Descriptors
 **File Descriptors**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-04 at 7.30.45 PM.png' | relative_url }}" alt="Screenshot" width="200">
@@ -151,7 +156,8 @@ user → group → other
 3. execute (x) - 1
 
 ex. -rw-r–r– (6 4 4)
-#### syscall, memcpy, Generic Swap
+
+## syscall, memcpy, Generic Swap
 **syscall**
 1. `%rax`: system call number to tell the kernel
 2. `%rdi, %rsi, %rdx, %r10, %r8, %r9`: used for passing up to 6 arguments
@@ -233,8 +239,11 @@ int main() {
 }
 ```
 
-![[Screen Shot 2024-05-04 at 4.32.02 PM 1.png| center | 200]]
-#### Mini Compiler
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 4.32.02 PM 1.png' | relative_url }}" alt="Screenshot" width="200">
+</div>
+
+## Mini Compiler
 **Overview**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-05 at 2.43.12 PM.png' | relative_url }}" alt="Screenshot" width="500">
@@ -275,12 +284,13 @@ int main() {
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-05 at 4.46.04 PM.png' | relative_url }}" alt="Screenshot" width="">
 </div>
-#### Function Pointers, Generic Sort
+
+## Function Pointers, Generic Sort
 **Function Pointers**
 ```C
 #include <stdio.h>
 
-## GENERAL FORM ##
+##### GENERAL FORM #####
 float div (int a, int b){
 	return a/b;
 }
@@ -292,7 +302,7 @@ int main(){
 	printf("%f", result);
 }
 
-## PASSING A FUNCTION POINTER ##
+##### PASSING A FUNCTION POINTER #####
 int add(int a, int b) {
 	return a + b;
 }
@@ -308,7 +318,7 @@ int main() {
 	return 0;
 }
 
-## RETURNING FUNCTION POINTER ##
+##### RETURNING FUNCTION POINTER #####
 float div(int x, int y){
 	return ((float)x)/y;
 }
@@ -317,7 +327,7 @@ float (*return_func())(int, int) {
 	return div;
 }
 
-## TYPEDEF AND STRUCTS ##
+##### TYPEDEF AND STRUCTS #####
 typedef int (*Operation)(int, int); // Define a function pointer type
 
 // Define a struct to hold two integers and a function pointer
@@ -385,7 +395,8 @@ int main() {
 	return 0;
 }
 ```
-#### Enums, Volatile, Extern
+
+## Enums, Volatile, Extern
 **Enums**
 ```C
 // enums define a set of named integer constants
@@ -471,7 +482,8 @@ int main(){
 	return 0;
 }
 ```
-#### Sockets
+
+## Sockets
 **Client Server Model**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-04 at 5.25.00 PM.png' | relative_url }}" alt="Screenshot" width="400">
@@ -485,7 +497,7 @@ int main(){
   <img src="{{ '/images/Screen Shot 2024-05-04 at 5.20.46 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-#### Buffer Overflow
+## Buffer Overflow
 **Padding in Structs/Unions**
 - aligns members for optimal memory access
 <div style="text-align: center;">

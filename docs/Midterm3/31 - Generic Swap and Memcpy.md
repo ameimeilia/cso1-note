@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Generic Swpa and Memcpy
 parent: Midterm 3
 nav_order: 4
@@ -16,7 +17,7 @@ nav_order: 4
   <img src="{{ '/images/Screen Shot 2024-05-04 at 3.25.25 PM.png' | relative_url }}" alt="Screenshot" width="300">
 </div>
 
- **3. Return Value**
+**3. Return Value**
  1. the return value is placed in `%rax`, indicates success or error code
 
 **Example Implementation**
@@ -109,7 +110,6 @@ void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 // delim is a string that contains multiple delimiters
 char *strsep(char **stringp, const char *delim);
 ```
-
 <div>
   <img src="{{ '/images/Screen Shot 2024-05-04 at 4.25.15 PM 1.png' | relative_url }}" alt="Screenshot">
 </div>
@@ -131,4 +131,6 @@ int main() {
 }
 ```
 
-![[Screen Shot 2024-05-04 at 4.32.02 PM 1.png| center | 200]]
+<div style="center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 4.25.15 PM 1.png' | relative_url }}" alt="Screenshot" width="20"0>
+</div>![[Screen Shot 2024-05-04 at 4.32.02 PM 1.png| center | 200]]

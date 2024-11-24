@@ -16,6 +16,7 @@ nav_order: 13
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.02.44 PM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## icode 6
 - b = 0 can be executed by adding IM as an input to the mux leading to WD3
 <div>
@@ -31,14 +32,17 @@ nav_order: 13
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.10.45 PM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## icode 7
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.23.43 PM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## Processing Stages
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.32.32 PM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## Functions
 - the location of the function can be hard-coded, but the return location cannot
 - the solution is to save PC = next instruction, then read and jump back to that location after executing the function
@@ -46,6 +50,7 @@ nav_order: 13
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.37.02 PM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## The Stack
 - used for recursive calls
 - the stack holds function states and their associated return addresses
@@ -54,6 +59,7 @@ nav_order: 13
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.53.09 PM.png' | relative_url }}" alt="Screenshot" width="250">
 </div>
+
 ## Push and Pop Instructions
 **Push**
 - decrements the RSP

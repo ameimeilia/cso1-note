@@ -6,6 +6,7 @@ nav_order: 2
 ---
 # Addressing Modes, Endianness, Assembly
 - the stack will start after the kernel
+
 ## AT&T Syntax
 - suffixes determine how many bytes are processed
 - instructions that change <32 bits preserves the rest of the register
@@ -20,6 +21,7 @@ nav_order: 2
 <div style="text-align: 300]]   ![[Screen Shot 2024-02-28 at 2.11.37 PM.png;">
   <img src="{{ '/images/Screen Shot 2024-02-28 at 2.11.03 PM.png' | relative_url }}" alt="Screenshot" width="360">
 </div>
+
 ## Assembly
 - Assembly is more precise than C
 <div>
@@ -41,6 +43,7 @@ nav_order: 2
 <div>
   <img src="{{ '/images/Screenshot 2024-09-12 at 10.06.11 PM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## GUI
 <div>
   <img src="{{ '/images/Screen Shot 2024-03-05 at 12.23.01 AM.png' | relative_url }}" alt="Screenshot">
@@ -48,11 +51,13 @@ nav_order: 2
 <div>
   <img src="{{ '/images/Screen Shot 2024-03-05 at 12.23.11 AM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## Bracket Syntax
 - brackets () can represent value in memory
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-05 at 12.24.33 AM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
+
 ## Computed Addresses
 - **displacement(base, index, scale) = base + (index * scale) + displacement**
 - base = starting point in memory

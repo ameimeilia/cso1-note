@@ -60,6 +60,3 @@ size_t strlen(const char *str)
 - `size_t` is a flexible type that stores the integer the size of the pointer (32/64)
 - `size_t` is unsigned, `ssize_t` is signed
 - `const char *str`: prevents the value the pointer points to from being reassigned
-
-## Exam Question
-

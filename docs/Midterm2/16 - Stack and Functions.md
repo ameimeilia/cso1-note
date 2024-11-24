@@ -19,6 +19,7 @@ nav_order: 1
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-28 at 2.05.16 PM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
+
 ## Intro to Assembly
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-26 at 6.20.02 PM.png' | relative_url }}" alt="Screenshot">

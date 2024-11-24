@@ -36,6 +36,7 @@ nav_order: 8
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-07 at 5.17.42 PM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
+
 ## Additional Memory Components
 **Program Counter**
 - to track where we are in a program

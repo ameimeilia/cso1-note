@@ -5,7 +5,7 @@ parent: Midterm 1
 nav_order: 16
 ---
 # Midterm 1 Study Guide
-#### Boolean Algebra
+## Boolean Algebra
 **Logic Gates**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 4.39.33 PM.png' | relative_url }}" alt="Screenshot" width="500">
@@ -25,7 +25,7 @@ nav_order: 16
   <img src="{{ '/images/Screen Shot 2024-01-22 at 1.03.16 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-#### Binary Arithmetic
+## Binary Arithmetic
 **2-bit Adder**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 4.51.37 PM.png' | relative_url }}" alt="Screenshot" width="450">
@@ -47,7 +47,8 @@ nav_order: 16
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-01-28 at 4.07.18 PM.png' | relative_url }}" alt="Screenshot" width="250">
 </div>
-#### Signed Bitwise and Hex
+
+## Signed Bitwise and Hex
 **Sign Bit**: highest bit represents sign
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 5.01.02 PM.png' | relative_url }}" alt="Screenshot" width="500">
@@ -80,7 +81,8 @@ nav_order: 16
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-01-26 at 2.41.44 PM.png' | relative_url }}" alt="Screenshot" width="300">
 </div>
-#### Bitwise Operations
+
+## Bitwise Operations
 **Operators**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 5.23.54 PM.png' | relative_url }}" alt="Screenshot" width="600">
@@ -95,6 +97,7 @@ nav_order: 16
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 5.29.27 PM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
+
 **Flipping**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 5.29.45 PM.png' | relative_url }}" alt="Screenshot" width="450">
@@ -113,7 +116,8 @@ nav_order: 16
 **Parity**
 - 1 = total # of “1” bits is odd
 - 0 = total # of “1” bits is even
-#### Endian and Floating Point
+
+## Endian and Floating Point
 **Endianness**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-01-29 at 2.38.16 PM.png' | relative_url }}" alt="Screenshot" width="450">
@@ -130,7 +134,8 @@ nav_order: 16
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 8.03.09 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
-#### ISA Components
+
+## ISA Components
 **Muxes**
 <div>
   <img src="{{ '/images/Screen Shot 2024-05-03 at 5.39.09 PM.png' | relative_url }}" alt="Screenshot">
@@ -188,7 +193,8 @@ nav_order: 16
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 6.52.17 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
-#### ISA Code
+
+## ISA Code
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 6.24.01 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
@@ -240,7 +246,8 @@ nav_order: 16
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.32.32 PM.png' | relative_url }}" alt="Screenshot">
 </div>
-#### Functions, Push, and Pop
+
+## Functions, Push, and Pop
 **Functions**
 - save pc+2 to be accessed by ret (return instruction), set pc = M\[pc+1\]
 <div style="text-align: center;">

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: File Descriptors and Memory Errors
 parent: Midterm 3
 nav_order: 3

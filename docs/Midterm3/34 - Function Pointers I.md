@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Fucntion Pointers 1
 parent: Midterm 3
 nav_order: 7

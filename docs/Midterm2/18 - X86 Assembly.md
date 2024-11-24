@@ -9,6 +9,7 @@ nav_order: 3
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-13 at 2.10.15 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
+
 ## From C to an Executable
 **C → Assembly**
 <div style="text-align: center;">
@@ -46,6 +47,7 @@ nav_order: 3
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-13 at 3.11.43 PM.png' | relative_url }}" alt="Screenshot" width="600">
 </div>
+
 ## Pushing and Popping with Moves
 - no need to use register
 <div>

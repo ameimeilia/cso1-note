@@ -25,17 +25,29 @@ nav_order: 4
 | ![[Screen Shot 2024-02-01 at 1.41.47 PM.png \| center \| 150]] |                    ![[Screen Shot 2024-02-01 at 1.40.25 PM.png \| center \| 150]]                     |
 
 ![[Screen Shot 2024-02-23 at 12.56.02 PM.png | center | 500]]
+
 ## Setting and Flipping
 Setting to 1 using the | operator:
-![[Screen Shot 2024-02-01 at 2.00.20 PM.png]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-01 at 2.00.20 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+![[]]
 
 Flipping using the ^ operator:
-![[Screen Shot 2024-02-01 at 2.00.49 PM.png]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-01 at 2.00.49 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+
 ## Masking and Combining
 Masking/extracting using the & operator:
-![[Screen Shot 2024-02-01 at 2.01.07 PM.png]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-01 at 2.01.07 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 Combining using the | operator:
-![[Screen Shot 2024-02-01 at 2.01.21 PM.png]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-01 at 2.01.21 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+
 ## Parity
 - either 1 (total amount of “1” bits is odd)or 0 (total amount of “1” bits is even)

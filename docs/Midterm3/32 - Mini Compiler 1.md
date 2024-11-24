@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Mini Compiler 1
 parent: Midterm 3
 nav_order: 5
@@ -20,7 +21,8 @@ y = 4;    // in y <- 4, <- is an invalid token
 7. #(.\*): # followed by any character 
 8. <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-17 at 1.04.45 PM.png' | relative_url }}" alt="Screenshot" width="150">
-</div>
+</div>'
+
 ## Lexing/Tokenizing
 - source code → lexical analyzer → tokens
 - Lex: tool that uses supplied patterns to output parsing code
@@ -28,6 +30,7 @@ y = 4;    // in y <- 4, <- is an invalid token
   <img src="{{ '/images/Screen Shot 2024-05-05 at 3.03.09 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
 - everything is already implemented in `lex.l` except `printcn`
+                                                         
 ## Backus-Naur Form
 - used to specify order of tokens
 <div style="text-align: center;">
@@ -69,6 +72,7 @@ int main(){
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-17 at 1.52.15 PM.png' | relative_url }}" alt="Screenshot" width="300">
 </div>
+
 ## Overview
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-05 at 2.43.12 PM.png' | relative_url }}" alt="Screenshot" width="500">

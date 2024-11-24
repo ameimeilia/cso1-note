@@ -33,6 +33,7 @@ nav_order: 7
 **Clocks Using Ring Oscillators**<div style="text-align: center;">
   <img src="{{ '/images/Screenshot 2024-09-12 at 9.57.21 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
+
 ## Flip-Flops
 **Positive Edge-Triggered D Flip-Flop**
 Inputs:
@@ -59,6 +60,7 @@ Outputs:
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-05 at 1.59.12 PM.png' | relative_url }}" alt="Screenshot" width="500">
 </div>
+
 ## Exam Questions
 <div style="text-align: center;">
   <img src="{{ '/images/Screenshot 2024-09-12 at 9.58.01 PM.png' | relative_url }}" alt="Screenshot">

@@ -61,6 +61,7 @@ char q = *((char*)p);
 <div>
   <img src="{{ '/images/Screen Shot 2024-04-02 at 1.42.20 PM.png' | relative_url }}" alt="Screenshot">
 </div>
+
 ## Free
 `void free(void *ptr);`
 - dangerous because y can still access the space

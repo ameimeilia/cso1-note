@@ -19,6 +19,7 @@ nav_order: 4
 **Note**
 - %rdi and %edi are the same, except %rdi is 64-bit and %edi is 32-bit
 - if register values are unchanged, we can optimize by not pushing and popping, although we lose code understandability
+
 ## Callee Calling Convention
 1. allocate local variables, either with registers or the stack
 2. push values from registers that are callee saved that will be used by the function
@@ -29,6 +30,7 @@ nav_order: 4
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-14 at 4.18.14 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
+
 ## Stack Frames
 Contains:
 1. local storage of variables (optional)
@@ -44,6 +46,7 @@ Contains:
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-14 at 4.29.16 PM.png' | relative_url }}" alt="Screenshot" width="300">
 </div>
+
 ## Callee’s Prologue and Epilogue
 - the following code may be added at the beginning and end of a function:
 <div style="text-align: center;">
