@@ -1,9 +1,9 @@
-title: UVA CS 3100 Student Notes
+title: UVA CS 2130 Student Notes
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
 url: https://ameimeilia.github.io
 
-baseurl: "/cso1-note"
+baseurl: "/cso1-notes"
 
 nav_enabled: true
