@@ -57,7 +57,7 @@ nav_order: 4
 </div>
 
 <div style="text-align: center;">
-  <img src="{{ '/images/Screen Shot 2024-01-28 at 10.08.42 PM.png' | relative_url }}" alt="Screenshot" width="350">
+  <img src="{{ '/images/Screen Shot 2024-01-28 at 10.08.42 PM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
 
 ## Exam Questions

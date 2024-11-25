@@ -32,7 +32,7 @@ nav_order: 16
 </div>
 
 **4-bit Adder**
-- sum = XOR
+- sum = `XOR`
 - carry when 2 true inputs
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-03 at 4.52.03 PM.png' | relative_url }}" alt="Screenshot" width="450">
@@ -114,8 +114,8 @@ nav_order: 16
 </div>
 
 **Parity**
-- 1 = total # of “1” bits is odd
-- 0 = total # of “1” bits is even
+- `1` = total # of `1` bits is odd
+- `0` = total # of `1` bits is even
 
 ## Endian and Floating Point
 **Endianness**
@@ -142,7 +142,9 @@ nav_order: 16
 </div>
 
 **Mux as a Look-up Table**
-![[LookupTables | center]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screenshot 2024-09-12 at 9.55.05 PM.png' | relative_url }}" alt="Screenshot" width="400">
+</div>
 
 **Clocks**
 <div style="text-align: center;">
@@ -210,29 +212,29 @@ nav_order: 16
 </div>
 
 **icode 5**
-- b-values of 0, 1, and 2 can be executed with the ALU
+- `b = 0, 1, 2` can be executed with the `ALU`
 - data path is long, make sure clock is slow enough for all data to propagate
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 8.29.30 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-- b = 3 can be executed by adding PC as an input to the mux leading to WD3
+- `b = 3` can be executed by adding `PC` as an input to the mux leading to `WD3`
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.02.44 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
 **icode 6**
-- b = 0 can be executed by adding IM as an input to the mux leading to WD3
+- `b = 0` can be executed by adding `IM` as an input to the mux leading to `WD3`
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.04.44 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-- b = 3 can be executed by adding a mux to the address input of the data memory
+- `b = 3` can be executed by adding a mux to the address input of the data memory
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.06.34 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-- b = 1, 2 can be executed by adding a mux to the second input of the ALU
+- `b = 1, 2` can be executed by adding a mux to the second input of the `ALU`
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.10.45 PM.png' | relative_url }}" alt="Screenshot">
 </div>
@@ -249,7 +251,7 @@ nav_order: 16
 
 ## Functions, Push, and Pop
 **Functions**
-- save pc+2 to be accessed by ret (return instruction), set pc = M\[pc+1\]
+- save `PC + 2` to be accessed by `ret` (return instruction), set `PC = M\[PC + 1\]`
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.37.02 PM.png' | relative_url }}" alt="Screenshot" width="600">
 </div>
@@ -263,9 +265,9 @@ nav_order: 16
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-25 at 10.36.11 PM.png' | relative_url }}" alt="Screenshot" width="500">
 </div>
-1. R2 = first parameter
-2. R3 = second parameter
-3. R0 = return value of the function
+1. `R2` = first parameter
+2. `R3` = second parameter
+3. `R0` = return value of the function
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.59.09 PM.png' | relative_url }}" alt="Screenshot" width="300">
 </div>

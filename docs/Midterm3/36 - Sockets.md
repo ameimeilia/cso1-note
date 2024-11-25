@@ -11,6 +11,7 @@ nav_order: 9
 </div>
 
 **Client Code (Python)**
+
 ```Python
 import socket
 
@@ -38,6 +39,7 @@ def connect_server():
 ```
 
 **Server Code**
+
 ```Python
 import socket
 
@@ -74,7 +76,7 @@ if __name__ == '__main__':
 ## Network Communications
 - socket interface behaves like files → read and write to sockets
 - ports: a unique number between 1-65,535 (16 bits wide) assigned to a socket
-		- dynamically allocated sockets pick port numbers between 49,152-65,535
+	- dynamically allocated sockets pick port numbers between 49,152-65,535
 - the OS maintains the mapping between sockets and processes
 - each socket on the network is uniquely identified by IP and port number
 <div style="text-align: center;">
@@ -88,6 +90,7 @@ if __name__ == '__main__':
 
 ## C Code
 **Imports**
+
 ```C
 #include <stdio.h>
 #include <stdlib.h>
@@ -101,6 +104,7 @@ if __name__ == '__main__':
 - `<netinet/in.h>`: used for IP family socket definitions
 
 **File Descriptors**
+
 ```C
 int main() {
 	int server_fd, client_fd;
@@ -109,6 +113,7 @@ int main() {
 ```
 
 **Create Socket**
+
 ```C
 int socket(int domain, int type, int protocol);
 ```
@@ -121,6 +126,7 @@ server_fd = socket(AF_INET, SOCK_STREAM, 0);
 ```
 
 **Set Address**
+
 ```C
 address.sin_family = AF_INET;
 address.sin_addr.s_addr = INADDR_ANY;
@@ -131,6 +137,7 @@ address.sin_port = htons(PORT);
 - `htons(PORT)`: converts host byte order to network byte order (big-endian)
 
 **Bind and Listen**
+
 ```C
 bind(server_fd, (struct sockaddr *)&address, sizeof(address));
 listen(server_fd, 10);
@@ -140,6 +147,7 @@ int addrlen = sizeof(address);
 - `listen`: param1 is the socket that will accept incoming connection requests, param2 is the buffer size
 
 **Serve the Page**
+
 ```C
 while (1) {
 	// new_socket is a file descriptor (int)
@@ -150,6 +158,7 @@ while (1) {
 ```
 
 **Close File Descriptors**
+
 ```C
 	close(new_socket);
 }

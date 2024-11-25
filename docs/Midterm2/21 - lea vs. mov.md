@@ -12,8 +12,8 @@ nav_order: 6
 </div>
 
 ## leaq vs. movq
-- leaq calculates an address and loads it into the destination
-- movq moves content and will access memory if the source operand is a memory location
+- `leaq` calculates an address and loads it into the destination
+- `movq` moves content and will access memory if the source operand is a memory location
 <div>
   <img src="{{ '/images/Screen Shot 2024-03-15 at 2.37.36 PM.png' | relative_url }}" alt="Screenshot">
 </div>
@@ -30,4 +30,3 @@ leaq (%rbx, %rcx), %rdx
 rdx <- rbx + rcx
 rdx <= address-of(memory[rbx + rcx])
 ```
-## Exam Question

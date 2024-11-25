@@ -18,6 +18,7 @@ nav_order: 11
 </div>
 
 ## Array Access
+
 ```C
 strings[1][2] <-> (*(strings + 1))[2] <-> *((*(strings + 1)) + 2)
 
@@ -40,6 +41,7 @@ x[1][2] <-> (*(x + 1))[2] <-> *((*(x + 1)) + 2)
 - `typedef [type_info] [new_name];`
 
 **Example**
+
 ```C
 typedef int dimension;
 
@@ -62,6 +64,7 @@ printf("%s\n, name")
 - composite data type that allows you to group variables of different data types under a single name
 
 **Format**
+
 ```C
 struct struct_name {    //struct_name is optional
 	data_type member1;
@@ -71,6 +74,7 @@ struct struct_name {    //struct_name is optional
 ```
 
 **Example**
+
 ```C
 struct student {
 	int year;
@@ -84,6 +88,7 @@ daniel.graded = 77.7;
 ```
 
 **Combining typedef and struct**
+
 ```C
 typedef struct student {
 	int year;

@@ -22,12 +22,12 @@ nav_order: 9
 </div>
 
 **Rule 3**
-- ` = *p` means go to the address stored at the pointer an retrieve the value
-- ex. ` = *p -> = 4`
+- `\ = *p` means go to the address stored at the pointer an retrieve the value
+- ex. `\ = *p -> = 4`
 
 **Rule 4**
-- ` = &p` means get the address of the variable
-- ex ` = &p -> = 0x...0006`
+- `\ = &p` means get the address of the variable
+- ex `\ = &p -> = 0x...0006`
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-28 at 11.37.56 AM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
@@ -38,7 +38,7 @@ nav_order: 9
 </div>
 ## Pass by Value
 **Pass by Reference Example**
-- variables in main are unchanged by the swap function
+- variables in main are unchanged by the `swap` function
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-28 at 12.05.46 PM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
@@ -76,6 +76,7 @@ nav_order: 9
 
 **sizeof Array**
 - return the total number of bytes in the array
+
 ```C
 int x[4] = {1,2,3,4};
 int totalNumberOfBytes = sizeof(x);    //4*4 = 16
@@ -91,6 +92,7 @@ int totalNumberOfBytes = sizeof(x);    //4*1 = 4
 </div>
 
 **Setting Values Using Pointers**
+
 ```C
 int x[4] = {1,2,3,4};
 *x = 7;    // goes to the address x points to and sets it to 7
@@ -102,7 +104,7 @@ int x[4] = {1,2,3,4};
 ```C
 *(x + 1) = 7;
 ```
-- in Assembly, `x + 1` would be represented as `0xDD + 4
+- in Assembly, `x + 1` would be represented as `0xDD + 4`
 - in pointer arithmetic, constants are treated as multiples of the size of the pointer type
 
 ```C
@@ -120,6 +122,7 @@ int x[4] = {1,2,3,4};
 
 ## Array Nuances
 - arrays are not simply pointers, they are of type `int[n]`, meaning they cannot be assigned
+
 ```C
 int x[4] = {1,2,3,4};
 int y[5] = {1,2,3,4,5};
@@ -141,6 +144,7 @@ x = p;    // not allowed, array is not assignable
 </div>
 
 ## Char Array and Strings
+
 ```C
 char message[6] = {'h', 'e', 'l', 'l', 'o', '\0'};    // declaring/instantiating
 

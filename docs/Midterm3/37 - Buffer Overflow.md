@@ -6,6 +6,7 @@ nav_order: 10
 ---
 # Buffer Overflow
 ## Bytes and Padding
+
 ```C
 #include <stdio.h>
 #include <stdint.h>
@@ -44,6 +45,7 @@ int main() {
 ```
 
 ## Data as Code
+
 ```C
 #include <stdio.h>
 #include <stdint.h>
@@ -78,7 +80,8 @@ int main() {
   <img src="{{ '/images/Screen Shot 2024-04-30 at 4.46.18 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-## gets Function
+## `gets` Function
+
 ```C
 #include <stdio.h>
 
@@ -106,6 +109,7 @@ int main() {
 
 ## Socket and Buffer Overflows
 - to fix the vulnerabilities with the `gets()` function, read from a socket
+
 ```C
 #include <stdio.h>
 
@@ -125,6 +129,7 @@ int main() {
 </div>
 
 **Error Practice**
+
 ```C
 int copy_something(char *buf, int len) {
 	char kbuf[800];

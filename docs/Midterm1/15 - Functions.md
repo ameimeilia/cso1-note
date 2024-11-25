@@ -12,9 +12,9 @@ nav_order: 15
 
 ## Function Parameters
 1. functions will be limited to 2 parameters
-2. R2 = first parameter
-3. R3 = second parameter
-4. R0 = return value of the function
+2. `R2` = first parameter
+3. `R3` = second parameter
+4. `R`0 = return value of the function
 5. save registers before modifying and restore them before returning
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-18 at 9.59.09 PM.png' | relative_url }}" alt="Screenshot" width="300">
@@ -33,4 +33,4 @@ nav_order: 15
 </div>
 
 ## New Halt Instruction
-- use 0xFF for halt instead of 0x80
+- use `0xFF` for halt instead of `0x80`

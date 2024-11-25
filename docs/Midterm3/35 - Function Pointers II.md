@@ -7,6 +7,7 @@ nav_order: 8
 # Function Pointers 2
 ## Function Pointers cont.
 **Functions that Return Function Pointers**
+
 ```C
 float div(int x, int y){
 	return ((float)x)/y;
@@ -18,6 +19,7 @@ float (*return_func())(int, int) {
 ```
 
 **TypeDef with Function Pointers**
+
 ```C
 typedef float (*function_type)(int, int);
 
@@ -27,6 +29,7 @@ function_type returnDivider(){
 ```
 
 **Structs with Function Pointers**
+
 ```C
 #include <stdiol.h>
 void myfunction(); //Function prototype
@@ -50,6 +53,7 @@ int main(){
 ## Enums
 - user-defined data type that consists of a set of named integer constants
 - used to define a list of named values that represent a finite set of possible values for a variable
+
 ```C
 enum Name{
 	Constant_1,
@@ -59,6 +63,7 @@ enum Name{
 ```
 
  **Examples**
+
 ```C
 #include <stdio.h>
 
@@ -106,6 +111,7 @@ void move(enum Direction dir) {    // so readable!!!
 
 ## Volatile and Extern
 **Volatile**
+
 ```C 
 volatile int flag = 0;    // variable can get changed in another location
 
@@ -125,6 +131,7 @@ int main() {
 ```
 
 **Extern**
+
 ```C
 // In some other file, let's say 'file1.c'
 int count = 5;
@@ -142,6 +149,7 @@ int main() {
 ## Bit Fields
 - used to specify the width ≤ to that of a type
 - limitations: can have pointers due to alignment/padding
+
 ```C
 // data_type: int, signed int, or unsigned int.
 // member_name: the name of the bit field
@@ -152,6 +160,7 @@ struct {
 ```
 
 **Example**
+
 ```C
 // Space optimized representation of the date
 

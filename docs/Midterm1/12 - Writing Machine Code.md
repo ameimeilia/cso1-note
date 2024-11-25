@@ -12,7 +12,7 @@ nav_order: 12
 
 ## Instruction Memory and Instruction Register
 - takes in an 8-bit address and reads 16-bits
-- mux selects between passing 1 or 2 to the adder to increment PC, controlled by C0
+- mux selects between passing 1 or 2 to the adder to increment `PC`, controlled by `C0`
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-18 at 4.11.45 PM.png' | relative_url }}" alt="Screenshot" width="200">
 </div>

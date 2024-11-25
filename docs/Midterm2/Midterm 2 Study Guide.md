@@ -4,25 +4,26 @@ title: Misterm 2 Study Guide
 parent: Midterm 2
 nav_order: 13
 ---
-
-#### Toy ISA
-## ISA extended R=1
+# Midterm 2 Study Guide
+## Toy ISA
+### ISA extended R=1
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-25 at 10.36.11 PM.png' | relative_url }}" alt="Screenshot" width="500">
 </div>
 
-1. R2 = first parameter
-2. R3 = second parameter
-3. R0 = return value of the function
+1. `R2` = first parameter
+2. `R3` = second parameter
+3. `R0` = return value of the function
 4. save registers before modifying and restore them before returning
-5. use 0xFF for halt instead of 0x80
-## Functions
-- save registers before modifying and restore them before returning
-- use 0xFF for halt instead of 0x80
+5. use `0xFF` for halt instead of `0x80`
 
-1. R2 = first parameter
-2. R3 = second parameter
-3. R0 = return value of the function
+### Functions
+- save registers before modifying and restore them before returning
+- use `0xFF` for halt instead of 0x80
+
+1. `R2` = first parameter
+2. `R3` = second parameter
+3. `R0` = return value of the function
 
 **Recursive Sum Function Example**
 <div style="text-align: center;">
@@ -31,23 +32,25 @@ nav_order: 13
 <div>
   <img src="{{ '/images/Screen Shot 2024-02-25 at 11.51.26 PM.png' | relative_url }}" alt="Screenshot">
 </div>
-#### Assembly
-## Assembly Syntax
+
+## Assembly
+### Assembly Syntax
 **Register Aliasing**
-- RAX: 64 bits
-- EAX: lower 32 bits
-- AX: lower 16 bits, split into AH (higher 8) and AL (lower 8)
+- `RAX`: 64 bits
+- `EAX`: lower 32 bits
+- `AX`: lower 16 bits, split into `AH` (higher 8) and`AL` (lower 8)
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-26 at 2.32.07 PM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
 
 **AT&T Syntax**
-- $: value of constant 
-- %: value in register
-- 0x: value at memory address
-- ( ): value at memory address of register
+- `$`: value of constant 
+- `%`: value in register
+- `0x`: value at memory address
+- `( )`: value at memory address of register
 
 **Example Usage**
+
 ```
 movl $10, %eax // Move the constant value 10 into the EAX register
 
@@ -59,16 +62,22 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-28 at 2.07.48 PM.png' | relative_url }}" alt="Screenshot" width="250">
 </div>
-## Computed Addresses
+
+### Computed Addresses
 - **displacement(base, index, scale) = base + (index * scale) + displacement**
 - base = starting point in memory
 - scale = size of value (limited to 1, 2, 4, 8)
 - displacement and base are signed
-![[ComputedMemory | 600]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screenshot 2024-09-12 at 10.02.28 PM.png' | relative_url }}" alt="Screenshot" width="600">
+</div>
 
 **Computed Address Example**
-![[ComputedAddressExample | 600]]
-## Calling Convention
+<div style="text-align: center;">
+  <img src="{{ '/images/Screenshot 2024-09-12 at 10.01.28 PM.png' | relative_url }}" alt="Screenshot" width="600">
+</div>
+
+### Calling Convention
 **Caller**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-14 at 1.38.45 PM.png' | relative_url }}" alt="Screenshot" width="400">
@@ -78,7 +87,8 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-14 at 4.18.14 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
-## Stack Frames
+
+### Stack Frames
 **Contains:**
 1. local storage of variables (optional)
 2. temporary scape (optional)
@@ -93,8 +103,9 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-14 at 4.29.16 PM.png' | relative_url }}" alt="Screenshot" width="300">
 </div>
-## cmp, test, and jmp
-**Compare (CMP) Instruction**
+
+### `cmp`, `test`, and `jmp`
+**Compare Instruction**
 - subtracts but doesn’t store result
 - `cmp %rax, %rdi -> rdi-rax`
 
@@ -104,10 +115,10 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
 
 **Jumps**
 - `jle, jg, je` read condition codes following a comparison
-	1. CF: carry flag(for unsigned)
-	2. SF: sign flag (for signed negatives)
-	3. ZF: zero flag
-	4. OF: overflow flag (for signed overflow)
+	1. `CF`: carry flag(for unsigned)
+	2. `SF`: sign flag (for signed negatives)
+	3. `ZF`: zero flag
+	4. `OF`: overflow flag (for signed overflow)
 
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-14 at 5.27.33 PM.png' | relative_url }}" alt="Screenshot" width="400">
@@ -118,8 +129,9 @@ addl 4(%ebx), %edx // Add the value at memory address EBX+4 to the contents of E
   <img src="{{ '/images/Screen Shot 2024-03-14 at 5.48.01 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
 
-## Overlapping Registers
+### Overlapping Registers
 - setting 32-bit registers clears the corresponding 64-bit register
+
 ```
 movq $0xFFFFFFFFFFFFFFFF, %rax
 movl $0x1, %eax
@@ -128,29 +140,32 @@ movl $0x1, %eax
 ```
 
 - setting 8 or 16-bit registers does not clear the 64-bit register
+
 ```
 movq $0xFFFFFFFFFFFFFFFF, %rax
 movb $0x1, %al
 
 // %rax is $0xFFFFFFFFFFFFFF01
 ```
-## movq and leaq
-**movq**
+
+### `movq` and `leaq`
+**`movq`**
 - can be used to perform pushing and popping
-- uses subsections of rsp/rbp rather than multiple registers
-- `-4(%rsp)`: value at the memory of rsp - 4
+- uses subsections of `rsp`/`rbp` rather than multiple registers
+- `-4(%rsp)`: value at the memory of `rsp - 4`
 <div>
   <img src="{{ '/images/Screen Shot 2024-03-14 at 11.33.03 AM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-**movq vs leaq**
-- leaq calculates an address and loads it into the destination
-- movq moves content and will access memory if the source operand is a memory location
+**`movq` vs `leaq`**
+- `leaq` calculates an address and loads it into the destination
+- `movq` moves content and will access memory if the source operand is a memory location
 <div>
   <img src="{{ '/images/Screen Shot 2024-03-15 at 2.37.36 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-**lea Tricks**
+**`lea` Tricks**
+
 ```
 leaq (%rax, %rax, 4), %rax
 rax <- rax * 5
@@ -162,7 +177,8 @@ leaq (%rbx, %rcx), %rdx
 rdx <- rbx + rcx
 rdx <- address-of(memory[rbx + rcx])
 ```
-## Switch Statement and Jump Tables
+
+### Switch Statement and Jump Tables
 **General Form**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-25 at 8.09.29 PM.png' | relative_url }}" alt="Screenshot" width="450">
@@ -179,8 +195,8 @@ rdx <- address-of(memory[rbx + rcx])
   <img src="{{ '/images/Screen Shot 2024-03-25 at 8.25.30 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
 
-#### C
-## C Syntax
+## C
+### C Syntax
 **Types**
 - each type has a certain size
 <div style="text-align: center;">
@@ -221,10 +237,11 @@ int number_of_bytes = sizeof(x);    // sizeof(x) returns 4
 - hold memory addresses
 - uninitialized pointers are also free-floating
 
-`int variable2 = *pointer` sets variable2 to the value the pointer points to
+`int variable2 = *pointer` sets `variable2` to the value the pointer points to
 
 `*pointer = 4` goes to the memory location and sets the value to 4
-## Pointers
+
+### Pointers
 **Pointer Rules**
 1. `[type] *[variable_name]` is a declaration
 2. `*[variable_name] = ` means go to the address stored at the pointer and update it
@@ -255,6 +272,7 @@ int number_of_bytes = sizeof(x);    // sizeof(x) returns 4
 
 **Null Pointer**
 - pointer that does not point to any memory location
+
 ```C
 #include<stdio.h>
 #define NULL 0
@@ -269,6 +287,7 @@ int main)(){
 **Void Pointer**
 - generic pointer type that can point to any data type
 - can’t be dereferenced, need to cast
+
 ```C
 int a = 7;
 char x = 'y';
@@ -283,8 +302,10 @@ char q = *p;    // NOT ALLOWED
 // derefence to get char
 char q = *((char*)p);
 ```
-## Arrays
+
+### Arrays
 **Example Implementation**
+
 ```C
 // declaration and initialization
 // a slot (4-bytes wide for int) is allocated on the stack for each element
@@ -300,9 +321,11 @@ int totalNumberOfBytes = sizeof(x);    // = 16 (4 elements * 4 bytes)
 
 *(x + 2) = 5;    // in Assembly, x + 2 would be represented as 0xDD + 8
 ```
+
  <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-03 at 6.31.57 PM.png' | relative_url }}" alt="Screenshot" width="500">
 </div>
+
 **Array Accesses Examples**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-28 at 2.10.34 PM.png' | relative_url }}" alt="Screenshot" width="450">
@@ -310,6 +333,7 @@ int totalNumberOfBytes = sizeof(x);    // = 16 (4 elements * 4 bytes)
 
 **Array Nuances**
 - arrays are not simply pointers, they are of type `int[n]`, meaning they cannot be assigned
+
 ```C
 int x[4] = {1,2,3,4};
 int y[5] = {1,2,3,4,5};
@@ -336,8 +360,10 @@ x = p;    // not allowed, array is not assignable
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-02 at 12.45.45 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
-## Strings
+
+### Strings
 **Char Array**
+
 ```C
 // the string is stored in the code section, so it is not writable
 // message is a pointer -> message and &message are NOT the same
@@ -350,6 +376,7 @@ char message[6] = {'h', 'e', 'l', 'l', 'o', '\0'};
 ```
 
 **String Helper Functions**
+
 ```C
 // size_t is a flexible type that stores the int size of the pointer (32 or 64)
 // size_t is unsigned, ssize_t is signed
@@ -369,6 +396,7 @@ size_t strlen(const char *str)
 </div>
 
 **String Array Access**
+
 ```C
 // accesses the letter at index 2 of the word at index 1
 strings[1][2] <-> (*(strings + 1))[2] <-> *((*(strings + 1)) + 2)
@@ -378,9 +406,11 @@ OR
 char **x = strings;
 x[1][2] <-> (*(x + 1))[2] <-> *((*(x + 1)) + 2)
 ```
-## Command Line Arguments
+
+### Command Line Arguments
 - the first element in the `argv` array is the name of the program itself
 - when you call `./a.out Hello` it will print `a.out`
+
 ```C
 int main(int argc, char **argv){
 	if (argc > 0){
@@ -390,6 +420,7 @@ int main(int argc, char **argv){
 ```
 
 - to print `Hello`:
+
 ```C
 int main(int argc, char **argv){
 	if (argc > 0){
@@ -397,12 +428,14 @@ int main(int argc, char **argv){
 	}
 }
 ```
-## typedef, struct, and union
-**typedef**
+
+### `typedef`, `struct`, and `union`
+**`typedef`**
 - allows you to provide an alias for a type
 - `typedef [type_info] [new_name];`
 
-**typedef Example**
+**`typedef` Example**
+
 ```C
 typedef char* string;
 
@@ -412,10 +445,11 @@ string AI = "maybe";
 printf("%s\n, name");
 ```
 
-**struct**
+**`struct`**
 - composite data type that allows you to group variables of different data types under a single name
 
-**struct Example**
+**`struct` Example**
+
 ```C
 struct student {    // the struct name (in this case "student") is optional
 	int year;    // members of the struct...
@@ -428,7 +462,8 @@ daniel.year = 4;
 daniel.graded = 77.7;
 ```
 
-**Combining typedef and struct**
+**Combining `typedef` and `struct`**
+
 ```C
 typedef struct student {
 	int year;
@@ -470,6 +505,7 @@ printf("grade %0.2f", grade);
 </div>
 
 **union**
+
 ```C
 int main(){
 	union {       // similar to structs but
@@ -484,11 +520,13 @@ int main(){
 	return 0;
 }
 ```
-## The Heap
+
+### The Heap
 - the heap is used for dynamic memory allocation
 - it can be explicitly managed using the functions `malloc`, `calloc`, `realloc`, and `free`
 
-**malloc** (memory allocation)
+**`malloc`** (memory allocation)
+
 ```C
 // allocates a block of a specified size
 // args: # of bytes to allocate
@@ -502,7 +540,8 @@ int *a = (int *)malloc(sizeof(int) * 8);
   <img src="{{ '/images/Screen Shot 2024-04-02 at 1.41.50 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-**calloc** (contiguous allocation)
+**`calloc`** (contiguous allocation)
+
 ```C
 // allocates a block of memory for an array of elements
 // args: # of elements and the size of each element
@@ -513,7 +552,8 @@ void* calloc(size_t nmemb, size_t size);
   <img src="{{ '/images/Screen Shot 2024-04-02 at 1.42.06 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-**realloc** (reallocation)
+**`realloc`** (reallocation)
+
 ```C
 // changes the size of the previously allocated memory block
 // args: pointer to the memory to resize, new size in bytes
@@ -524,7 +564,8 @@ void* realloc(void *ptr, size_t size);
   <img src="{{ '/images/Screen Shot 2024-04-02 at 1.42.20 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-**free**
+**`free`**
+
 ```C
 // disassociates a pointer from a region of memory
 // dangerous because the disassociated pointer still holds its value

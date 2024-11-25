@@ -11,9 +11,9 @@ nav_order: 2
 - suffixes determine how many bytes are processed
 - instructions that change <32 bits preserves the rest of the register
 - note: X86 will truncate if the constant is larger than the destination
-- $: constant
-- %: register
-- no $: memory address
+- `$`: constant
+- `%`: register
+- no `$`: memory address
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-28 at 2.07.48 PM.png' | relative_url }}" alt="Screenshot" width="250">
 </div>
@@ -53,7 +53,7 @@ nav_order: 2
 </div>
 
 ## Bracket Syntax
-- brackets () can represent value in memory
+- brackets `()` represent value in memory
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-03-05 at 12.24.33 AM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>

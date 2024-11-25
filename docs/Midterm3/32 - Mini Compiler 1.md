@@ -7,6 +7,7 @@ nav_order: 5
 # Mini Compiler 1
 ## ToyG Syntax
 - only supports integers
+
 ```C
 x = 3;    // = is a valid token
 y = 4;    // in y <- 4, <- is an invalid token
@@ -43,6 +44,7 @@ y = 4;    // in y <- 4, <- is an invalid token
 </div>
 
 ## Union Structure in C
+
 ```C
 int main(){
 	union {       // similar to structs but

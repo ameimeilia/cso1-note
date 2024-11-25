@@ -6,6 +6,7 @@ nav_order: 12
 ---
 # Null, Void, Heap, and Free
 ## Null Pointer
+
 ```C
 #include<stdio.h>
 #define NULL 0
@@ -20,6 +21,7 @@ int main)(){
 ## Void Pointer
 - pointer not associated with a data type
 - can’t be dereferenced, need to cast
+
 ```C
 int a = 7;
 char x = 'y';
@@ -64,13 +66,14 @@ char q = *((char*)p);
 
 ## Free
 `void free(void *ptr);`
-- dangerous because y can still access the space
+- dangerous because `y` can still access the space
 - only works for space on the heap
 <div>
   <img src="{{ '/images/Screen Shot 2024-04-02 at 3.37.06 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
 - to fix: set pointer to null once freed
+
 ```C
 free(p);
 p = NULL;

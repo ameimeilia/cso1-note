@@ -10,6 +10,7 @@ nav_order: 2
 </div>
 
 ## scanf
+
 ```C
 int scanf(const char *format, ...)
 // ... indiciates that the function accepts variable length arguments
@@ -17,6 +18,7 @@ int scanf(const char *format, ...)
 ```
 
 **Example**
+
 ```C
 int a;
 int b;
@@ -24,7 +26,9 @@ int b;
 printf("Enter two number: ");
 scanf("%d %d", &a, &b);
 ```
+
 ## Malloc Examples
+
 ```C
 // use dynamically allocated memory on the stack to read in a file
 // vs. declaring variables on the stack: might exceed/take up unnecessary space
@@ -41,12 +45,13 @@ int main(){
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-09 at 10.08.14 AM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
+
 ## Allocators Implementing Malloc
 Allocators:
 1. can’t control the number or size of allocated blocks
 2. must allocate blocks from free memory
 3. can manipulate and modify only free memory
-4. can’t move the allocated blocks once they are malloc’d
+4. can’t move the allocated blocks once they are `malloc`’d
 
 - **fragmentation**: losing space after freeing a pointer
 - instead of memory addresses, use word addresses (int-sized)
@@ -66,14 +71,17 @@ Allocators:
 - methods (still have fragmentation):
 	1. best fit
 	2. next fit
+
 ## Header Files
 - API that provides the method definition so we can use a library
+
 ```C
 #include <filename.h>    // for files in system/default directory
 #include "filename.h"    // for files in the same directory as source file
 ```
 
 **Example**
+
 ```C
 #ifndef EXAMPLE_HEADER_FILE
 #define EXAMPLE_HEADER_FILE
@@ -87,24 +95,28 @@ Allocators:
 #endif
 ```
 ## FILE IO
+
 ```C
 FILE *fopen(const char *filename, const chat *mode);
 ```
 
-| mode | desc.                                                                                                                                                                           |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| r    | Opens an existing text file for reading purposes.                                                                                                                               |
-| w    | Opens a text file for writing. If it does not exist, then a new file is created. Here your program will start writing content from the beginning of the file.                   |
+| mode | desc. |
+| ---- | ---------------------------------------------------------------------------------------------------------------- |
+| r    | Opens an existing text file for reading purposes. |
+| w    | Opens a text file for writing. If it does not exist, then a new file is created. Here your program will start writing content from the beginning of the file. |
 | a    | Opens a text file for writing in appending mode. If it does not exist, then a new file is created. Here your program will start appending content in the existing file content. |
-| r+   | Opens a text file for both reading and writing.                                                                                                                                 |
-| w+   | Opens a text file for both reading and writing. It first truncates the file to zero length if it exists, otherwise creates a file if it does not exist.                         |
-| a+   | Opens a text file for both reading and writing. It creates the file if it does not exist. The reading will start from the beginning but writing can only be appended.           |
+| r+   | Opens a text file for both reading and writing. |
+| w+   | Opens a text file for both reading and writing. It first truncates the file to zero length if it exists, otherwise creates a file if it does not exist. |
+| a+   | Opens a text file for both reading and writing. It creates the file if it does not exist. The reading will start from the beginning but writing can only be appended. |
+
 **Closing Files**
+
 ```C
 int fclose(FILE *fp);
 ```
 
 **Example**
+
 ```C
 #include <stdio.h>
 #include <stdlib.h>

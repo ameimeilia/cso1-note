@@ -6,8 +6,8 @@ nav_order: 7
 ---
 # Muxes, Clocks, and Flip-Flops
 ## Muxes
-- selector S input selects between one of N inputs to connect to output
-- represented each input with log<sub>2</sub>N bits
+- selector `S` input selects between one of $N$ inputs to connect to output
+- represented each input with $log_2N$ bits
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-05 at 11.56.05 AM.png' | relative_url }}" alt="Screenshot" width="600">
 </div>
@@ -23,25 +23,26 @@ nav_order: 7
 
 ## Clocks
 - produces a periodic signal
-- **period/cycle** = length of time for one clock cycle (1 / frequency)
-- **frequency** = 1 / period
+- **period/cycle** = length of time for one clock cycle ($1 / frequency$)
+- **frequency** = $1 / period$
 - ex. Intel Core i-9 3.0GHz processor → 3,000,000,000 cycles/sec where every cycle executes one instruction
 <div style="text-align: center;">
   <img src="{{ '/images/Screenshot 2024-09-12 at 9.55.57 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
 
-**Clocks Using Ring Oscillators**<div style="text-align: center;">
+**Clocks Using Ring Oscillators**
+<div style="text-align: center;">
   <img src="{{ '/images/Screenshot 2024-09-12 at 9.57.21 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
 
 ## Flip-Flops
 **Positive Edge-Triggered D Flip-Flop**
 Inputs:
-1. D - Data in (the single bit to be stored)
-2. Clock - output wave determines when the values change and how long they remain
+1. `D` - Data in (the single bit to be stored)
+2. `Clock` - output wave determines when the values change and how long they remain
 
 Outputs:
-1. Q - value of the internal state
+1. `Q` - value of the internal state
 2. $\overline{Q}$ - the inverse of Q
 
 <div style="text-align: center;">

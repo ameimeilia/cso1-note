@@ -16,18 +16,19 @@ nav_order: 10
 
 ## String Literals in C
 - `char *b = "some text";`: the string is stored in the code section, so it is not writable
-- b is a pointer, b and &b are NOT the same
+- `b` is a pointer, `b` and `&b` are NOT the same
 <div>
   <img src="{{ '/images/Screen Shot 2024-04-02 at 11.59.47 AM.png' | relative_url }}" alt="Screenshot">
 </div>
 
 - `char b[] = "some text";`: a copy of the string is stored on the stack
-- b is an array, a and &a ARE the same
+- ``b` is an array, `a` and `&a` ARE the same
 <div>
   <img src="{{ '/images/Screen Shot 2024-04-02 at 12.00.01 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
 ## Command Line Arguments
+
 ```C
 int main(int argc, char **argv){
 	if (argc > 0){
@@ -40,6 +41,7 @@ int main(int argc, char **argv){
 - when you call `./a.out Hello` it will print `a.out`
 
 - to print `Hello`:
+
 ```C
 int main(int argc, char **argv){
 	if (argc > 0){
@@ -54,6 +56,7 @@ int main(int argc, char **argv){
 - `const int x = 10` : stores type information as opposed to `#define x 10`
 
 ## String Helper Functions
+
 ```C
 size_t strlen(const char *str)
 ```

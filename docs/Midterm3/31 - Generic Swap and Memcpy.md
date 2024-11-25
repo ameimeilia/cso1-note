@@ -9,7 +9,9 @@ nav_order: 4
 **1. Register Usage for Arguments**
 1. `%rax`: system call number to tell the kernel
 2. `%rdi, %rsi, %rdx, %r10, %r8, %r9`: used for passing up to 6 arguments
-![[Screen Shot 2024-05-04 at 3.40.48 PM 1.png| center | 150]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 3.40.48 PM 1.png' | relative_url }}" alt="Screenshot" width="150">
+</div>
 
 **2. Making the System Call**
 1. `syscall` instruction switches into kernel mode and invokes the system call based on the value in `%rax`
@@ -21,6 +23,7 @@ nav_order: 4
  1. the return value is placed in `%rax`, indicates success or error code
 
 **Example Implementation**
+
 ```C
 .global _start
 .text
@@ -40,17 +43,20 @@ message: ;                     // Label for the message
 <div>
   <img src="{{ '/images/Screen Shot 2024-05-04 at 3.32.11 PM 1.png' | relative_url }}" alt="Screenshot">
 </div>
-## memcpy and memmove
-**memcpy**
+
+## `memcpy` and `memmove`
+**`memcpy`**
 -  function in the C standard library, defined in <string.h>
 - used to copy a specified number of bytes from one memory location to another
 - don’t use with overlapping regions as it will result in undefined behavior
 - returns a pointer to destination
+
 ```C
 void *memcpy(void *dest, const void *src, size_t n);
 ```
 
-**memcpy Example**
+**`memcpy` Example**
+
 ```C
 #include <stdio.h>
 #include <string.h>
@@ -67,13 +73,15 @@ int main() {
 }
 ```
 
-**memmove**
+**`memmov`e**
 - safe to use when the source and destination memory regions overlap
+
 ```C
 void *memmove(void *dest, const void *src, size_t n);
 ```
 
-**memmove Example**
+**`memmove` Example**
+
 ```C
 #include <stdio.h>
 #include <string.h>
@@ -88,7 +96,9 @@ int main() {
 	return 0;
 }
 ```
+
 ## Generic Swap
+
 ```C
 void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 	// store a copy o fdata1 in temp storage
@@ -104,7 +114,9 @@ void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 	free(temp);
 }
 ```
-## strsep
+
+## `strsep`
+
 ```C
 // stringp is a pointer to the string that we want to parse
 // delim is a string that contains multiple delimiters
@@ -113,6 +125,7 @@ char *strsep(char **stringp, const char *delim);
 <div>
   <img src="{{ '/images/Screen Shot 2024-05-04 at 4.25.15 PM 1.png' | relative_url }}" alt="Screenshot">
 </div>
+
 
 ```C
 #include <stdio.h>
@@ -132,5 +145,8 @@ int main() {
 ```
 
 <div style="center;">
-  <img src="{{ '/images/Screen Shot 2024-05-04 at 4.25.15 PM 1.png' | relative_url }}" alt="Screenshot" width="20"0>
-</div>![[Screen Shot 2024-05-04 at 4.32.02 PM 1.png| center | 200]]
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 4.25.15 PM 1.png' | relative_url }}" alt="Screenshot" width="200">
+</div>
+<div style="center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 4.32.02 PM 1.png' | relative_url }}" alt="Screenshot" width="200">
+</div>

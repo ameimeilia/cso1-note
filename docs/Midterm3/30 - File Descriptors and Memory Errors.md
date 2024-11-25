@@ -9,10 +9,11 @@ nav_order: 3
 - non-negative integer that uniquely identifies an open file or I/O stream within a process
 - OS maintains a file descriptor table for each process to keep track of open files
 
-**fcntl.h Header**
+**`fcntl.h` Header**
 - file control header file
 - part of C standard library
 - manipulates file descriptors and provides additional control over open files
+
 ```C
 #include <fcntl.h>
 #include <unistd.h>
@@ -26,19 +27,20 @@ int main() {
 }
 ```
 
-**0 (stdin)**
+**`0` (stdin)**
 - standard input
 - used for reading input from the keyboard and other input sources
 
-**1 (stdout)**
+**`1` (stdout)**
 - standard output
 - used for writing normal output (typically the console)
 
-**2(stderr)**
+**`2` (stderr)**
 - standard error
 - used for writing error messages or diagnostic information to the console
 
-**fgets**
+**`fgets`**
+
 ```C
 char *fgets(char *s, int size, FILE *stream);    // read from stdin
 ```
@@ -49,6 +51,7 @@ size_t fwrite(const void *ptr, size_t size, nmemb_t nmemb, FILE *stream);
 ```
 
 **Example File Descriptor**
+
 ```C
 #include <stdio.h>
 #include <unistd.h>
@@ -84,6 +87,7 @@ int main() {
 	return 0;
 }
 ```
+
 ## perror
 - library function in C that prints a descriptive error message to `stderr`
 - message based on the global variable `errno` which gets set by system calls/library functions in the event of an error
@@ -105,9 +109,9 @@ int main() {
 
 ## Linux Permissions
 **Types of permissions:**
-1. read (r) - 4
-2. write (w) - 2
-3. execute (x) - 1
+1. read (`r`) - 4
+2. write (`w`) - 2
+3. execute (`x`) - 1
 
 **Levels of permissions:**
 1. user

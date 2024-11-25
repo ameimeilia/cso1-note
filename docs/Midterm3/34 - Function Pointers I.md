@@ -10,6 +10,7 @@ nav_order: 7
 
 **Declaration and Initialization**
 - general form: `[return type] (*[pointer name])([parameters])`
+
 ```C
 float div (int a, int b){
 	return a/b;
@@ -28,6 +29,7 @@ int main(){
 ```
 
 **Passing a Function Pointer**
+
 ```C
 #include <stdio.h>
 
@@ -46,12 +48,15 @@ int main() {
 	return 0;
 }
 ```
+
 ## Generic Sort
 - `qsort()` function sorts an array with `nmemb` elements of size `size` where `base` points to the start of the array
+
 ```C
 void qsort(void *base, size_t nmemb, size_t size,
 		   int(*compar)(const void*, const void *)); 
 ```
+
 
 ```C
 #include <stdio.h>
@@ -71,11 +76,12 @@ int main() {
 	return 0;
 }
 ```
+
 ## The Right-Left Rule
 **Symbols:**
-- * means 'pointer to' (left side)
-- [] means 'array of' (right side)
-- () means 'function returning' (right side)
+- `*` means 'pointer to' (left side)
+- `[]` means 'array of' (right side)
+- `()` means 'function returning' (right side)
 
 **Steps:**
 1. Find the identifier (the variable or function name) and start with ‘<\identifier> is'.
@@ -84,6 +90,7 @@ int main() {
 4. Repeat steps 2 and 3 as necessary
 
 **Examples**
+
 ```C
 int *p[];    // "p is an array of pointers to ints"
 

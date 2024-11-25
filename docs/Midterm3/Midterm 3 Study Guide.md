@@ -7,6 +7,7 @@ nav_order: 11
 # Midterm 3 Study Guide
 ## Undefined Behavior
 **Examples of Undefined Behavior**
+
 ```C
 int main(){
 	// behavior changes based on compiler
@@ -136,14 +137,14 @@ int main() {
 }
 ```
 
-**perror**
+**`perror`**
 - prints error message to `stderr` based on `errno` variable
 - if no error, doesn’t terminate and `errno` = Success
 <div>
   <img src="{{ '/images/Screen Shot 2024-05-04 at 2.44.28 PM.png' | relative_url }}" alt="Screenshot">
 </div>
 
-**va_list**
+**`va_list`**
 - variable length parameter list
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-04 at 2.56.24 PM.png' | relative_url }}" alt="Screenshot" width="500">
@@ -151,17 +152,19 @@ int main() {
 
 **Linux Permissions**
 user → group → other
-1. read (r) - 4
-2. write (w) - 2
-3. execute (x) - 1
+1. read (`r`) - 4
+2. write (`w`) - 2
+3. execute (`x`) - 1
 
-ex. -rw-r–r– (6 4 4)
+ex. `-rw-r–r– (6 4 4)`
 
 ## syscall, memcpy, Generic Swap
-**syscall**
+**`syscall`**
 1. `%rax`: system call number to tell the kernel
 2. `%rdi, %rsi, %rdx, %r10, %r8, %r9`: used for passing up to 6 arguments
-![[Screen Shot 2024-05-04 at 3.40.48 PM 1.png| center | 150]]
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-05-04 at 3.40.48 PM 1.png' | relative_url }}" alt="Screenshot" width="150">
+</div>
 
 3. `syscall` instruction switches into kernel mode and invokes the system call based on the value in `%rax`
  4. the return value is placed in `%rax`, indicates success or error code
@@ -186,7 +189,8 @@ message: ;                     // Label for the message
   <img src="{{ '/images/Screen Shot 2024-05-04 at 3.32.11 PM 1.png' | relative_url }}" alt="Screenshot">
 </div>
 
-**memcpy and memmove**
+**`memcpy` and `memmove`**
+
 ```C
 void *memcpy(void *dest, const void *src, size_t n);    // returns a pointer to dest
 
@@ -195,6 +199,7 @@ void *memmove(void *dest, const void *src, size_t n);
 ```
 
 **Generic Swap**
+
 ```C
 void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 	// store a copy of data1 in temp storage
@@ -211,7 +216,8 @@ void swap(void *data1ptr, void *data2ptr, size_t nbytes) {
 }
 ```
 
-**strsep**
+**`strsep`**
+
 ```C
 // stringp is a pointer to the string that we want to parse
 // delim is a string that contains multiple delimiters
@@ -287,6 +293,7 @@ int main() {
 
 ## Function Pointers, Generic Sort
 **Function Pointers**
+
 ```C
 #include <stdio.h>
 
@@ -356,6 +363,7 @@ int main() {
 ```
 
 **Right-Left Rule**
+
 ```C
 /*  * = pointer to, [] = array of, () = function returning
  *  1. "<variable or function> is..."
@@ -372,6 +380,7 @@ int *(*func())();
 
 **Generic Sort**
 - `qsort()` function sorts an array with `nmemb` elements of size `size` where `base` points to the start of the array
+
 ```C
 void qsort(void *base, size_t nmemb, size_t size,
 		   int(*compar)(const void*, const void *)); 
@@ -398,6 +407,7 @@ int main() {
 
 ## Enums, Volatile, Extern
 **Enums**
+
 ```C
 // enums define a set of named integer constants
 // the first element in the array is implicitly assigned 0
@@ -428,6 +438,7 @@ void move(enum Direction dir) {    // so readable!!!
 ```
 
 **Volatile**
+
 ```C 
 volatile int flag = 0;    // variable can get changed in another location
 
@@ -447,6 +458,7 @@ int main() {
 ```
 
 **Extern**
+
 ```C
 // In some other file, let's say 'file1.c'
 int count = 5;
@@ -462,6 +474,7 @@ int main() {
 ```
 
 **Bit Fields**
+
 ```C
 // bit fields used to specify width of struct members
 struct date {
@@ -488,6 +501,7 @@ int main(){
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-05-04 at 5.25.00 PM.png' | relative_url }}" alt="Screenshot" width="400">
 </div>
+
 **The Process**
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-25 at 6.09.17 PM.png' | relative_url }}" alt="Screenshot" width="500">
@@ -504,13 +518,14 @@ int main(){
   <img src="{{ '/images/Screen Shot 2024-05-04 at 5.35.42 PM.png' | relative_url }}" alt="Screenshot" width="500">
 </div>
 
-**gets(), Socket and Buffer Overflow**
+**`gets()`, Socket and Buffer Overflow**
 - `gets()` doesn’t check the bounds of the buffer → memory leaks
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-04-30 at 4.54.35 PM.png' | relative_url }}" alt="Screenshot" width="300">
 </div>
 
 - if we read from the socket then an attacker can execute arbitrary code
+
 ```C
 void vulnerable_function(int sockfd) {    // dangerous!!
 	char buffer[7];

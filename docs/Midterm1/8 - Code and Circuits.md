@@ -32,7 +32,7 @@ nav_order: 8
 
 **Write to a Register File**
 - use demuxes to write to a register file
-- additional inputs: write enable (WE), write data (WD), address of register to be written to (A3)
+- additional inputs: write enable (`WE`), write data (`WD`), address of register to be written to (`A3`)
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-07 at 5.17.42 PM.png' | relative_url }}" alt="Screenshot" width="450">
 </div>
@@ -40,21 +40,24 @@ nav_order: 8
 ## Additional Memory Components
 **Program Counter**
 - to track where we are in a program
-<div style="text-align: 200]] ![[Screen Shot 2024-02-05 at 2.31.57 PM.png;">
+<div style="text-align: center;">
+  <img src="{{ '/images/Screen Shot 2024-02-05 at 2.31.57 PM.png' | relative_url }}" alt="Screenshot" width="200">
+</div>
+<div style="text-align: center">
   <img src="{{ '/images/Screen Shot 2024-02-05 at 2.31.19 PM.png' | relative_url }}" alt="Screenshot" width="250">
 </div>
 
 **Instruction Memory**
 - stores the program
-- read data (RD) for a given address (A)
+- read data (`RD`) for a given address (`A`)
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-07 at 6.17.22 PM.png' | relative_url }}" alt="Screenshot" width="150">
 </div>
 
 **Data Memory**
 - contains data needed by the program
-- read data (RD) for a given address (A)
-- write data (WD) for a given address (A)
+- read data (`RD`) for a given address (`A`)
+- write data (`WD`) for a given address (`A`)
 <div style="text-align: center;">
   <img src="{{ '/images/Screen Shot 2024-02-07 at 6.24.47 PM.png' | relative_url }}" alt="Screenshot" width="150">
 </div>

@@ -28,14 +28,37 @@ nav_order: 6
 </div>
 
 **Example**
-![[Screen Shot 2024-04-17 at 2.15.03 PM.png]]![[Screen Shot 2024-04-17 at 2.15.20 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.15.03 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.15.20 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Adding Variables/Identifiers**
-![[Screen Shot 2024-04-17 at 2.17.29 PM.png]]![[Screen Shot 2024-04-17 at 2.19.08 PM.png]]
-![[Screen Shot 2024-04-17 at 2.19.45 PM.png]]![[Screen Shot 2024-04-17 at 2.19.57 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.17.29 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.19.08 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.19.45 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.19.57 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Variables/Variables**
-![[Screen Shot 2024-04-17 at 2.25.56 PM.png]]![[Screen Shot 2024-04-17 at 2.26.13 PM.png]]![[Screen Shot 2024-04-17 at 2.26.26 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.25.56 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.26.13 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.26.26 PM.png' | relative_url }}" alt="Screenshot">
+</div>
 
 **Another Example**
 <div>
@@ -43,4 +66,21 @@ nav_order: 6
 </div>
 
 ## Conditionals and If Statements
-![[Screen Shot 2024-04-17 at 2.32.11 PM.png]]![[Screen Shot 2024-04-17 at 2.32.26 PM.png]]![[Screen Shot 2024-04-17 at 2.32.47 PM.png]]![[Screen Shot 2024-04-17 at 2.33.01 PM.png]]![[Screen Shot 2024-04-17 at 2.36.39 PM.png]]![[Screen Shot 2024-04-17 at 2.37.28 PM.png]]
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.32.11 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.32.26 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.32.47 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.33.01 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.36.39 PM.png' | relative_url }}" alt="Screenshot">
+</div>
+<div>
+  <img src="{{ '/images/Screen Shot 2024-04-17 at 2.37.28 PM.png' | relative_url }}" alt="Screenshot">
+</div>

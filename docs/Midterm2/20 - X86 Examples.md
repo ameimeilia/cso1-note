@@ -27,13 +27,13 @@ nav_order: 5
 
 ## Condition Codes and Jumps
 **Flags**:
-- CF: carry flag(for unsigned)
-- SF: sign flag (for signed negatives)
-- ZF: zero flag
-- OF: overflow flag (for signed overflow)
+- `CF`: carry flag(for unsigned)
+- `SF`: sign flag (for signed negatives)
+- `ZF`: zero flag
+- `OF`: overflow flag (for signed overflow)
 
 - implicitly set by arithmetic operations (not changed by `leal)
-- 1 = true, 0 = false
+- `1` = true, `0` = false
 
 **Jumps**
 - `jle, jg, je` read condition codes following a comparison
@@ -54,6 +54,7 @@ nav_order: 5
 
 ## Overlapping Registers
 - setting 32-bit registers clears the corresponding 64-bit register
+
 ```
 movq $0xFFFFFFFFFFFFFFFF, %rax
 movl $0x1, %eax
@@ -62,6 +63,7 @@ movl $0x1, %eax
 ```
 
 - setting 8 or 16-bit registers does not clear the 64-bit register
+
 ```
 movq $0xFFFFFFFFFFFFFFFF, %rax
 movb $0x1, %al
