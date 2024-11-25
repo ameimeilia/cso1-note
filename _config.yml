@@ -7,3 +7,5 @@ url: https://ameimeilia.github.io
 baseurl: "/cso1-notes"
 
 nav_enabled: true
+
+math: katex
